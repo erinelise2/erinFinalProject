@@ -51,8 +51,7 @@ export default function ObservationForm () {
           }
     return (
         <div>
-            <Form className="border border-3 border-dark">
-                <h3 className='header m-2'><span class="border-bottom border-3 border-dark form-header">What Did You See?</span></h3>
+            <Form className="border border-3 border-white p-2">
                 <Label className="fs-5 fw-bold p-2" for="newObservation">Name of Animal or Insect:</Label>
                 <Input type="text" className="fs-6" id="newObservation" placeholder="Name of Animal or Insect" onChange={(e) => setNewObservation(e.target.value)} required></Input>
                 <Label className="fs-5 fw-bold p-2">Classification: </Label>

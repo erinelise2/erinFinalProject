@@ -30,6 +30,8 @@ export default function FieldGuide() {
   return (   
     <> 
     <div className="form-container App">
+      <h1 className="fieldguide-header">Your Observations</h1>
+      <p className="fieldguide-text">Your Field Guide records all of the animals you have seen. You can edit or delete your observations using the buttons on the table.</p>
       {observations.map((observation, index) => (
         <div className="mapContainer" key={index}>
           <div>
