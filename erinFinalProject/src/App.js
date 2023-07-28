@@ -2,10 +2,11 @@ import './App.css';
 import {Routes, Route } from 'react-router-dom';
 import Container from "react-bootstrap/Container";
 import Navigation from "./Components/Navigation";
-import Home from './Components/Home';
-import WaysToHelp from './Components/WaysToHelp';
-import ConservationGroups from './Components/ConservationGroups';
-import FieldGuide from './Components/FieldGuide';
+import Home from './Pages/Home';
+import WaysToHelp from './Pages/WaysToHelp';
+import ConservationGroups from './Pages/ConservationGroups';
+import FieldGuide from './Pages/FieldGuide';
+import Contact from './Pages/Contact';
 import Footer from './Components/Footer';
 
 // Navbar templates: https://react-bootstrap.netlify.app/docs/components/navbar/
@@ -21,11 +22,14 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/fieldguide" element={<FieldGuide />}></Route>  
         <Route path="/waystohelp" element={<WaysToHelp />}></Route>
-        <Route path="/conservationgroups" element={<ConservationGroups />}></Route>  
+        <Route path="/conservationgroups" element={<ConservationGroups />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
     </Routes>
     </Container>
     </div>
-    <Footer />
+    <footer>
+      <Footer />
+    </footer>
     </>
   );
 }

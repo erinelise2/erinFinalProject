@@ -72,3 +72,16 @@
   font-family: 'Shadows Into Light', cursive;
   color: white;
 }
+
+.contact-header {
+  text-align: center;
+}
+
+.contact-form {
+  text-align: center;
+}
+
+.contact-btn {
+  background-color: rgb(148, 166, 148);
+  color: white;
+}

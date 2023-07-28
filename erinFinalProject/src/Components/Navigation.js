@@ -15,6 +15,7 @@ export default function Navigation() {
             <Nav.Link as={NavLink} to="/fieldguide">Field Guide</Nav.Link> 
             <Nav.Link as={NavLink} to="/waystohelp">Ways To Help</Nav.Link>
             <Nav.Link as={NavLink} to="/conservationgroups">Conservation Groups</Nav.Link> 
+            <Nav.Link as={NavLink} to="/contact">Contact Us</Nav.Link>
           </Nav>
           </Navbar.Collapse>
         </Container>

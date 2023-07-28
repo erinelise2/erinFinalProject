@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import ObservationForm from '../Components/ObservationForm';
+
 // import { Button, Form, Input, Label } from "reactstrap";
 
 export default function Home() {
@@ -12,13 +14,13 @@ export default function Home() {
       <div>
         <h1 className="home-header">Let's Go Exploring!</h1>
         <h4 className="home-text">Use This Form to Document What You See:</h4>
-{/* paste form from week 15 here */}
+        <ObservationForm />
+
+{/* button to Observation Form Modal... or Observation Form right here */}
 
       </div>
       <div>
         <Link to="/fieldguide" className="border m-2 p-2 rounded nav-btn">Field Guide</Link> 
-        <Link to="/waystohelp" className="border m-2 p-2 rounded justify-content-center nav-btn">Ways To Help</Link>
-        <Link to="/conservationgroups" className="border m-2 p-2 rounded justify-content-center nav-btn">Conservation Groups</Link>
     </div>
     </>
   );
