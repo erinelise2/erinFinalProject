@@ -3,11 +3,10 @@ import {Routes, Route, NavLink, Link} from 'react-router-dom';
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-
 import Home from './Components/Home';
-import About from './Components/About';
+import WaysToHelp from './Components/WaysToHelp';
 import ConservationGroups from './Components/ConservationGroups';
-import Observations from './Components/Observations';
+import FieldGuide from './Components/FieldGuide';
 
 // Navbar templates: https://react-bootstrap.netlify.app/docs/components/navbar/
 
@@ -22,9 +21,9 @@ function App() {
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={NavLink} to="/">Home</Nav.Link>
-            <Nav.Link as={NavLink} to="/about">More to Explore</Nav.Link>
+            <Nav.Link as={NavLink} to="/waystohelp">Ways To Help</Nav.Link>
             <Nav.Link as={NavLink} to="/conservationgroups">Conservation Groups</Nav.Link>
-            <Nav.Link as={NavLink} to="/observations">Field Guide</Nav.Link>  
+            <Nav.Link as={NavLink} to="/fieldguide">Field Guide</Nav.Link>  
           </Nav>
           </Navbar.Collapse>
         </Container>
@@ -33,9 +32,9 @@ function App() {
       <Routes>
     {/* Below using Route is how you link to the component you want to load */}
         <Route path="/" element={<Home />}></Route>  
-        <Route path="/about" element={<About />}></Route>
+        <Route path="/waystohelp" element={<WaysToHelp />}></Route>
         <Route path="/conservationgroups" element={<ConservationGroups />}></Route>  
-        <Route path="/observations" element={<Observations />}></Route>
+        <Route path="/fieldguide" element={<FieldGuide />}></Route>
       </Routes>
       </Container>
     </div>

@@ -1,18 +1,45 @@
 .App {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.home-header {
+  text-align: center;
+  font-weight: bold;
+}
+
+.home-text {
+  text-align: center;
 }
 
 .nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   text-decoration: none;
   color: white;
   background-color: rgb(104, 139, 104);
 }
 
-.conservation-header {
+.ways-header {
+  text-align: center;
+  font-weight: bold;
+}
+
+.ways-text {
   text-align: center;
 }
 
-.btn-grp {
-  align-items: center;
+.ways-list-header {
+  text-align: center;
+  font-weight: bold;
+}
+
+.conservation-header {
+  text-align: center;
+  font-weight: bold;
+}
+
+.conservation-text {
+  text-align: center;
 }

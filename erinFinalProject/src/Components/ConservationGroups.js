@@ -3,13 +3,19 @@ import {Link} from 'react-router-dom'
 
 export default function ConservationGroups() {
   return (
+    <>
     <div>
-      <h1 className="conservation-header">Learn More About How You Can Help Wildlife</h1>
-    <div className='btn-group'>
-    <Link to="/" className="border m-2 p-2 rounded nav-btn">Home</Link>
-    <Link to="/support" className="border m-2 p-2 rounded nav-btn">Conservation Groups</Link>
-    <Link to="/observations" className="border m-2 p-2 rounded nav-btn">Field Guide</Link>    
+      <h1 className="conservation-header">Conservation Groups</h1><br></br>
+      <h4 className="conservation-text">Click on the links below to learn more about the conservation work of these amazing organizations!</h4>
+      <ul>
+        <li>The Nature Conservancy</li>
+      </ul>        
+      <div>
+        <Link to="/" className="border m-2 p-2 rounded nav-btn">Home</Link>
+        <Link to="/waystohelp" className="border m-2 p-2 rounded nav-btn">Ways To Help</Link>
+        <Link to="/fieldguide" className="border m-2 p-2 rounded nav-btn">Field Guide</Link> 
+      </div>
     </div>
-    </div>
+    </>
   )
 }
