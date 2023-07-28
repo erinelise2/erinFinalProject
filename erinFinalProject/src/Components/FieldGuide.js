@@ -11,6 +11,7 @@ export default function FieldGuide() {
         <tr>
           <th>Update</th>
           <th>Type of Animal</th>
+          <th>Classification</th>
           <th>City, State</th>
           <th>Location Type</th>
           <th>Time of Day</th>
@@ -21,6 +22,7 @@ export default function FieldGuide() {
       <tbody>
         <tr>
           <td><button className="fieldguide-btn btn border-secondary mb-2">✐</button></td>
+          <td></td>
           <td></td>
           <td></td>
           <td></td>

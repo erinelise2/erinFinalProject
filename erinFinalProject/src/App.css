@@ -1,5 +1,12 @@
 .App {
   font-family: 'Shadows Into Light', cursive;
+  background: linear-gradient(rgb(236, 229, 167), rgb(205, 197, 130), rgb(240, 226, 107), rgb(128, 121, 58));
+}
+
+.navigation-bar {
+  background-color: rgb(104, 139, 104);
+  color: white;
+  border: white;
 }
 
 .home-header {
@@ -52,8 +59,16 @@
 .fieldguide-table {
   text-align: center;
   flex: auto;
+  background-color: rgb(183, 215, 183);
 }
 
 .fieldguide-btn {
+  background-color: rgb(148, 166, 148);
+  color: white;
+}
+
+.footer-text {
   background-color: rgb(104, 139, 104);
+  font-family: 'Shadows Into Light', cursive;
+  color: white;
 }

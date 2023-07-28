@@ -5,9 +5,9 @@ import Navbar from "react-bootstrap/Navbar";
 
 export default function Navigation() {
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar expand="sm" className="navigation-bar mb-4">
         <Container>
-          <Navbar.Brand as={Link} to="/">Let's Explore</Navbar.Brand>
+          <Navbar.Brand className="text-white" as={Link} to="/">Let's Explore</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
