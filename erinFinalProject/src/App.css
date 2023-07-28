@@ -43,3 +43,17 @@
 .conservation-text {
   text-align: center;
 }
+
+.fieldguide-header {
+  text-align: center;
+  font-weight: bold;
+}
+
+.fieldguide-table {
+  text-align: center;
+  flex: auto;
+}
+
+.fieldguide-btn {
+  background-color: rgb(104, 139, 104);
+}

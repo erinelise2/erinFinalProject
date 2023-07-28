@@ -27,8 +27,8 @@ export default function WaysToHelp() {
     </div>
     <div>
       <Link to="/" className="border m-2 p-2 rounded nav-btn">Home</Link>
-      <Link to="/conservationgroups" className="border m-2 p-2 rounded nav-btn">Conservation Groups</Link>
       <Link to="/fieldguide" className="border m-2 p-2 rounded nav-btn">Field Guide</Link> 
+      <Link to="/conservationgroups" className="border m-2 p-2 rounded nav-btn">Conservation Groups</Link>
     </div>
   </>
   )

@@ -12,8 +12,8 @@ export default function ConservationGroups() {
       </ul>        
       <div>
         <Link to="/" className="border m-2 p-2 rounded nav-btn">Home</Link>
-        <Link to="/waystohelp" className="border m-2 p-2 rounded nav-btn">Ways To Help</Link>
         <Link to="/fieldguide" className="border m-2 p-2 rounded nav-btn">Field Guide</Link> 
+        <Link to="/waystohelp" className="border m-2 p-2 rounded nav-btn">Ways To Help</Link>
       </div>
     </div>
     </>
