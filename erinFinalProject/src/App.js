@@ -27,9 +27,7 @@ function App() {
     </Routes>
     </Container>
     </div>
-    <footer>
       <Footer />
-    </footer>
     </>
   );
 }

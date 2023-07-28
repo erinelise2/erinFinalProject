@@ -10,7 +10,7 @@ export default function Navigation() {
           <Navbar.Brand className="text-white" as={Link} to="/">Let's Explore</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto nav-list">
             <Nav.Link as={NavLink} to="/">Home</Nav.Link>
             <Nav.Link as={NavLink} to="/fieldguide">Field Guide</Nav.Link> 
             <Nav.Link as={NavLink} to="/waystohelp">Ways To Help</Nav.Link>

@@ -51,21 +51,21 @@ export default function ObservationForm () {
           }
     return (
         <div>
-            <Form className="m-5 border">
-                <h3 className='header m-2'><span class="border-bottom row border-3 p-1 fs-1">What Did You See?</span></h3>
-                <Label className="fs-4 fw-bold p-2" for="newObservation">Name of Animal or Insect:</Label>
-                <Input type="text" className="fs-5" id="newObservation" placeholder="Name of Animal or Insect" onChange={(e) => setNewObservation(e.target.value)} required></Input><br></br>
-                <Label className="fs-4 fw-bold p-2">Classification: </Label>
-                <Input type="text" className="fs-5" id="newClassification" placeholder="Ex: Mammal, Reptile, Bird, Insect" onChange={(e) => setNewClassification(e.target.value)}></Input>
-                <Label className="fs-4 fw-bold p-2" for="newLocation">Observation Location:</Label>
-                <Input type="text" className="fs-5" id="newLocation" placeholder="City, State" requireonChange={(e) => setNewLocation(e.target.value)} required ></Input><br></br>
-                <Label className="fs-4 fw-bold p-2">Type of Location: </Label> <br></br>
-                <Input type="text" className="fs-5" id="newLocation" placeholder="Ex: Field, Mountain, Sky, Ocean" onChange={(e) => setNewLocationType(e.target.value)}></Input><br></br>
-                <Label className="fs-4 fw-bold p-2" for="newDate">Observation Date:</Label>
-                <Input className="fs-5" id="newDate" type="Date" required onChange={(e) => setNewDate(e.target.value)}></Input><br></br>
-                <Label className="fs-4 fw-bold p-2">Time of Day: </Label> 
-                <Input type="text" className="fs-5" id="newTimeOfDay" placeholder="Ex: Morning, Afternoon, Evening, Night" onChange={(e) => setNewTimeOfDay(e.target.value)} required></Input>
-                <Button className='btn btn-sm new-btn border border-1 rounded-pill m-4 p-3 fw-bolder text-white fs-5 secondary' id="submitObservation" onClick={(e) => postNewObservation(e)}> Add Observation to Your Field Notes</Button>
+            <Form className="border border-3 border-dark">
+                <h3 className='header m-2'><span class="border-bottom border-3 border-dark form-header">What Did You See?</span></h3>
+                <Label className="fs-5 fw-bold p-2" for="newObservation">Name of Animal or Insect:</Label>
+                <Input type="text" className="fs-6" id="newObservation" placeholder="Name of Animal or Insect" onChange={(e) => setNewObservation(e.target.value)} required></Input>
+                <Label className="fs-5 fw-bold p-2">Classification: </Label>
+                <Input type="text" className="fs-6" id="newClassification" placeholder="Ex: Mammal, Reptile, Bird, Insect" onChange={(e) => setNewClassification(e.target.value)}></Input>
+                <Label className="fs-5 fw-bold p-2" for="newLocation">Observation Location:</Label>
+                <Input type="text" className="fs-6" id="newLocation" placeholder="City, State" requireonChange={(e) => setNewLocation(e.target.value)} required ></Input>
+                <Label className="fs-5 fw-bold p-2">Type of Location: </Label> 
+                <Input type="text" className="fs-6" id="newLocation" placeholder="Ex: Field, Mountain, Sky, Ocean" onChange={(e) => setNewLocationType(e.target.value)}></Input>
+                <Label className="fs-5 fw-bold p-2" for="newDate">Observation Date:</Label>
+                <Input className="fs-6" id="newDate" type="Date" required onChange={(e) => setNewDate(e.target.value)}></Input>
+                <Label className="fs-5 fw-bold p-2">Time of Day: </Label> 
+                <Input type="text" className="fs-6" id="newTimeOfDay" placeholder="Ex: Morning, Afternoon, Evening, Night" onChange={(e) => setNewTimeOfDay(e.target.value)} required></Input>
+                <Button className='btn btn-sm newobs-btn border rounded-pill m-4 p-3 fw-bolder fs-5' id="submitObservation" onClick={(e) => postNewObservation(e)}> Add Observation to Your Field Notes</Button>
             </Form>
         </div>
     );

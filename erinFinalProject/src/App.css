@@ -9,13 +9,8 @@
   border: white;
 }
 
-.home-header {
-  text-align: center;
-  font-weight: bold;
-}
-
-.home-text {
-  text-align: center;
+.nav-list {
+  text-align: left;
 }
 
 .nav-btn {
@@ -26,6 +21,28 @@
   text-decoration: none;
   color: white;
   background-color: rgb(104, 139, 104);
+}
+
+.home-header {
+  text-align: center;
+  font-weight: bold;
+}
+
+.home-text {
+  text-align: center;
+}
+
+.form-header {
+  text-align: center;
+}
+
+.newobs-btn {
+  background-color: rgb(104, 139, 104);
+  color: white;
+  border: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ways-header {
