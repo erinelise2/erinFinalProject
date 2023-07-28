@@ -1,0 +1,18 @@
+.App {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.nav-btn {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(104, 139, 104);
+}
+
+.conservation-header {
+  text-align: center;
+}
+
+.btn-grp {
+  align-items: center;
+}
