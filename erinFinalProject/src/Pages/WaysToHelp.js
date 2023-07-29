@@ -23,7 +23,7 @@ export default function WaysToHelp() {
             <li className="ways-list">Support polinators by planting native flowers, trees, and grasses</li>
             <li className="ways-list">Watch a nature documentary</li>
             <li className="ways-list">Share what you have learned with your friends and family</li>
-        </ul>
+        </ul><br></br>
     </div>
   </>
   )

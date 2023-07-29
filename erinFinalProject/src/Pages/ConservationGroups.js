@@ -17,7 +17,7 @@ export default function ConservationGroups() {
         <li><a href="https://www.painteddogresearch.org/" className="con-link">Painted Dog Research Trust</a></li>
         <li><a href="http://giraffeconservation.org" className="con-link">Giraffe Conservation Foundation</a></li>
         <li><a href="https://wwww.aza.org" className="con-link">Association of Zoos and Aquariums</a></li>
-      </ul>        
+      </ul><br></br>     
     </div>
     </>
   )
