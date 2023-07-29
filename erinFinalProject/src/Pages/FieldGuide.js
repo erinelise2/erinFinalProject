@@ -1,7 +1,13 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
 import { Button } from "reactstrap";
-import {Link} from 'react-router-dom'
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import Row from 'react-bootstrap/Row';
+import lizard from "../Images/fencelizard.jpeg";
+import monarch from "../Images/monarch.jpeg";
+import blackbear from "../Images/blackbear.jpeg";
 
 export default function FieldGuide() {
   const API_URL = 
@@ -29,9 +35,22 @@ export default function FieldGuide() {
 
   return (   
     <> 
-    <div className="form-container App">
-      <h1 className="fieldguide-header">Your Observations</h1>
-      <p className="fieldguide-text">Your Field Guide records all of the animals you have seen. You can edit or delete your observations using the buttons on the table.</p>
+    <div className="form-container fieldguide-app">
+      <h1 className="fieldguide-header">Your Field Notes</h1>
+      <Container>
+        <Row>
+          <Col>
+            <Image src={monarch} className="img-fluid m-1" rounded alt="image of monarch on milkweed"></Image>
+          </Col>
+          <Col>
+            <Image src={lizard} className="img-fluid m-1" rounded alt="image of fence lizard on white fence"></Image>
+          </Col>
+          <Col>
+            <Image src={blackbear} className="img-fluid m-1" rounded alt="image of black bear in forest"></Image>
+          </Col>
+        </Row>
+      </Container>
+      <p className="fieldguide-text fs-4 fw-bold">This Field Guide keeps track of all of the animals you have seen. <br></br>You can edit or delete your observations using the buttons on the table.</p>
       {observations.map((observation, index) => (
         <div className="mapContainer" key={index}>
           <div>
