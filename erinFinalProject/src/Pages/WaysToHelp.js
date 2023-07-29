@@ -59,7 +59,7 @@ export default function WaysToHelp() {
             </ul>
           </li>
         </ul>
-        <p className="ways-text"><b>Remember to Stay Curious and to Have Fun!</b><br></br> Record what you see. When you get home, reference your field guide to keep learning more about the animals and plants your observed!</p>
+        <p className="ways-text"><b>Stay Curious and Have Fun!</b><br></br> Record what you see. When you get home, reference your field guide to keep learning more about the animals and plants your observed!</p>
       <hr className="text-white m-4 border-2"></hr>
       <h4 className="ways-list-header">Things You Can Do In Your Daily Life To Help Wildlife:</h4>
         <ul>
