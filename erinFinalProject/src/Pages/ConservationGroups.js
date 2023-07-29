@@ -1,12 +1,20 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
+import Row from 'react-bootstrap/Row';
+import conservation from "../Images/conservation.png";
 
 export default function ConservationGroups() {
   return (
     <>
     <div className="conservation-container">
-      <h1 className="conservation-header mb-3">Conservation Groups</h1>
+      <h1 className="conservation-header mt-3 mb-3">Conservation Groups</h1>
       <h4 className="conservation-text">Click on the links below to learn more about some of the amazing organizations working to protect our wildlife all around our world!</h4>
+      <Row>
+          <Col>
+            <Image src={conservation} className="img-fluid mb-4" rounded alt="Unless Quote inside a drawing of the world with handdrawn animal around the world"></Image>
+          </Col>
+        </Row>
       <ul className="conservation-list">
         <li><a href="https://www.nature.org/en-us/" className="con-link">The Nature Conservancy</a></li>
         <li><a href="https://gorillafund.org/" className="con-link">Dian Fossey Gorilla Fund</a></li>
