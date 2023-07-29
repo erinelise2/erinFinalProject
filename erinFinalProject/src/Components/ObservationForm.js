@@ -50,21 +50,21 @@ export default function ObservationForm () {
           )
           }
     return (
-        <div>
-            <Form className="border border-3 border-white p-2">
-                <Label className="fs-5 fw-bold p-2" for="newObservation">Name of Animal or Insect:</Label>
+        <div className="text-center">
+            <Form className="border border-3 border-white p-2 observation-form">
+                <Label className="fs-4 fw-bold p-2" for="newObservation">Name of Animal or Insect:</Label>
                 <Input type="text" className="fs-6" id="newObservation" placeholder="Name of Animal or Insect" onChange={(e) => setNewObservation(e.target.value)} required></Input>
-                <Label className="fs-5 fw-bold p-2">Classification: </Label>
+                <Label className="fs-4 fw-bold p-2">Classification: </Label>
                 <Input type="text" className="fs-6" id="newClassification" placeholder="Ex: Mammal, Reptile, Bird, Insect" onChange={(e) => setNewClassification(e.target.value)}></Input>
-                <Label className="fs-5 fw-bold p-2" for="newLocation">Observation Location:</Label>
+                <Label className="fs-4 fw-bold p-2" for="newLocation">Observation Location:</Label>
                 <Input type="text" className="fs-6" id="newLocation" placeholder="City, State" requireonChange={(e) => setNewLocation(e.target.value)} required ></Input>
-                <Label className="fs-5 fw-bold p-2">Type of Location: </Label> 
+                <Label className="fs-4 fw-bold p-2">Type of Location: </Label> 
                 <Input type="text" className="fs-6" id="newLocation" placeholder="Ex: Field, Mountain, Sky, Ocean" onChange={(e) => setNewLocationType(e.target.value)}></Input>
-                <Label className="fs-5 fw-bold p-2" for="newDate">Observation Date:</Label>
+                <Label className="fs-4 fw-bold p-2" for="newDate">Observation Date:</Label>
                 <Input className="fs-6" id="newDate" type="Date" required onChange={(e) => setNewDate(e.target.value)}></Input>
-                <Label className="fs-5 fw-bold p-2">Time of Day: </Label> 
+                <Label className="fs-4 fw-bold p-2">Time of Day: </Label> 
                 <Input type="text" className="fs-6" id="newTimeOfDay" placeholder="Ex: Morning, Afternoon, Evening, Night" onChange={(e) => setNewTimeOfDay(e.target.value)} required></Input>
-                <Button className='btn btn-sm newobs-btn border rounded-pill m-4 p-3 fw-bolder fs-5' id="submitObservation" onClick={(e) => postNewObservation(e)}> Add Observation to Your Field Notes</Button>
+                <Button className="ob-btn btn mt-4 mb-2 fs-4 border-white" id="submitObservation" onClick={(e) => postNewObservation(e)}> Add Observation to Your Field Notes</Button>
             </Form>
         </div>
     );

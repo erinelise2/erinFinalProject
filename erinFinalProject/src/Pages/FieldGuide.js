@@ -35,8 +35,9 @@ export default function FieldGuide() {
       {observations.map((observation, index) => (
         <div className="mapContainer" key={index}>
           <div>
-          <table className="fieldguide-table table border">
-          <thead>
+          <table className="fieldguide">
+          <thead className="fieldguide-head fs-5 fw-bold border">
+            {/* this needs to move above the mapContainer div to append each into a table, but when I do that, the table cells do not reach the same widths and the background is wrong. */}
             <tr>
               <th>Update</th>
               <th>Type of Animal</th>
@@ -48,16 +49,16 @@ export default function FieldGuide() {
               <th>Remove</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="border-white">
             <tr>
-              <td><Button className="fieldguide-btn btn border-secondary mb-2" onClick="">✐</Button></td>
+              <td><Button className="fieldguide-btn btn border-secondary mb-2 border-white" onClick="">✐</Button></td>
               <td>{observation.observation}</td>
               <td>{observation.classification}</td>
               <td>{observation.location}</td>
               <td>{observation.locationtype}</td>
-              <td>{observation.date}</td>
               <td>{observation.timeofday}</td>
-              <td><Button className="fieldguide-btn btn border-secondary mb-2" onClick={() => deleteObservation(observation.id)}>🗑</Button></td>
+              <td>{observation.date}</td>
+              <td><Button className="fieldguide-btn btn border-secondary mb-2 border-white" onClick={() => deleteObservation(observation.id)}>🗑</Button></td>
             </tr>
           </tbody>
           </table>
@@ -66,10 +67,7 @@ export default function FieldGuide() {
         </div>
       ))}
     </div>
-        <div>
-        <Link to="/" className="border m-2 p-2 rounded nav-btn">Home</Link>
-        <Link to="/waystohelp" className="border m-2 p-2 rounded nav-btn">Ways To Help</Link>
-        <Link to="/conservationgroups" className="border m-2 p-2 rounded nav-btn">Conservation Groups</Link> 
+    <div>
     </div>
     </>
   );
