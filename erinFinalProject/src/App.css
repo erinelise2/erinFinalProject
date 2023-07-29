@@ -79,19 +79,23 @@ a:link {
   font-size: large;
 }
 
-.conservation-container {
+/* .conservation-container {
   background:rgb(128, 121, 58);
-}
+} */
 
 .conservation-header {
   text-align: center;
-  color: white;
-  font-weight: bold;
+  /* color: white; */
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px rgb(201, 254, 197);
 }
 
 .conservation-text {
   text-align: center;
-  color: white;
+  /* color: white; */
+  text-shadow: 1px 1px 1px rgb(201, 254, 197);
+  font-weight: bolder;
+  font-size: x-large;
 }
 
 .conservation-list {
@@ -99,6 +103,11 @@ a:link {
   text-align: center;
   font-size: x-large;
   text-shadow: 1px 1px 1px rgb(201, 254, 197);
+  background:rgb(128, 121, 58, 0.1);
+}
+
+.cons-img {
+  background:rgb(128, 121, 58, 0.1);
 }
 
 .con-link:hover {
