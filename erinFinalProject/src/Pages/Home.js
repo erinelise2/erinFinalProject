@@ -31,7 +31,7 @@ export default function Home() {
         </Row>
       </Container>
       <div>
-        <h2 className="home-header mt-4">Use The Form Below To Record What You See:</h2><br></br>
+        <h2 className="home-header mt-3 mb-3">Use The Form Below To Record What You See:</h2>
         <ObservationForm />
       </div>
       <div>

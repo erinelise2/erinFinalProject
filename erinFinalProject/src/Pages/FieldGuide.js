@@ -50,7 +50,8 @@ export default function FieldGuide() {
           </Col>
         </Row>
       </Container>
-      <p className="fieldguide-text fs-4 fw-bold">This Field Guide keeps track of all of the animals you have seen. <br></br>You can edit or delete your observations using the buttons on the table.</p>
+      <p className="fieldguide-text fs-4 fw-bold">This Field Guide keeps track of all of the animals you have seen.</p>
+      <p className="fieldguide-instructions fw-bold text-center"> You can edit or delete your observations using the buttons on the table.</p>
       {observations.map((observation, index) => (
         <div className="mapContainer" key={index}>
           <div>
