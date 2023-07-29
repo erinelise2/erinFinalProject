@@ -15,7 +15,7 @@ export default function ConservationGroups() {
           </Col>
       </Row>
       <h4 className="conservation-text">Click on the links below to learn more about some of the amazing organizations working to protect our wildlife all around our world!</h4>
-      <ul className="conservation-list mt-3">
+      <ul className="conservation-list">
         <li><a href="https://www.nature.org/en-us/" className="con-link">The Nature Conservancy</a></li>
         <li><a href="https://gorillafund.org/" className="con-link">Dian Fossey Gorilla Fund</a></li>
         <li><a href="https://turtlesurvival.org" className="con-link">Turtle Survival Alliance</a></li>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-// import UpdateForm from './UpdateForm';
+import UpdateForm from './UpdateForm';
 
 export default function EditBtnModal() {
   const [show, setShow] = useState(false);
@@ -10,8 +10,7 @@ export default function EditBtnModal() {
 
   return (
     <div className="edit-modal">
-      <button onClick={handleShow} className="review-btn btn border-secondary bg-white form-control mb-2" variant="white">
-      </button>
+      <button onClick={handleShow} className="btn border-secondary bg-white form-control mb-2" variant="white">✐</button>
 
       <Modal
         show={show}
@@ -23,7 +22,7 @@ export default function EditBtnModal() {
           <Modal.Title className="text-dark"> Edit Your Observation</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            {/* <UpdateForm /> */}
+            <UpdateForm />
         </Modal.Body>
       </Modal>
     </div>

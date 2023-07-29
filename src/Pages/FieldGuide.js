@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row';
 import lizard from "../Images/fencelizard.jpeg";
 import monarch from "../Images/monarch.jpeg";
 import blackbear from "../Images/blackbear.jpeg";
+import EditBtnModal from '../Components/EditBtnModal';
 
 export default function FieldGuide() {
   const API_URL = 
@@ -71,7 +72,7 @@ export default function FieldGuide() {
           </thead>
           <tbody className="border-white">
             <tr>
-              <td><Button className="fieldguide-btn btn border-secondary mb-2 border-white" onClick="">✐</Button></td>
+              <td><Button className="fieldguide-btn btn border-secondary mb-2 border-white" onClick={EditBtnModal() }>✐</Button></td>
               <td>{observation.observation}</td>
               <td>{observation.classification}</td>
               <td>{observation.location}</td>
