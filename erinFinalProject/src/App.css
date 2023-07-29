@@ -70,7 +70,13 @@ a:link {
 
 .ways-list {
   color: white;
-  font-weight: bold;
+  font-size: larger;
+}
+
+.ways-text {
+  color: white;
+  text-align: center;
+  font-size: large;
 }
 
 .conservation-container {
@@ -99,7 +105,7 @@ a:link {
   color: black;
   text-decoration: none;
   font-weight: bolder;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.);
 }
 
 .con-link:link {
