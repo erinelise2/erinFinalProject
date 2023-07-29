@@ -72,7 +72,7 @@ export default function FieldGuide() {
           </thead>
           <tbody className="border-white">
             <tr>
-              <td><Button className="fieldguide-btn btn border-secondary mb-2 border-white" onClick={EditBtnModal() }>✐</Button></td>
+              <td><Button className="fieldguide-btn btn border-secondary mb-2 border-white" onClick={() => EditBtnModal() }>✐</Button></td>
               <td>{observation.observation}</td>
               <td>{observation.classification}</td>
               <td>{observation.location}</td>
