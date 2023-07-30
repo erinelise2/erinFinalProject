@@ -53,9 +53,9 @@ export default function ObservationForm () {
         <div className="text-center">
             <Form className="border border-3 border-white p-2 observation-form">
             <h3 className='header m-2 p-2 fs-1 border-bottom border-3 border-white'><span>Your Field Guide Entry Form ✐</span></h3>
-                <Label className="fs-4 fw-bold mt-2 mb-2"  for="newObservation">Name of Animal or Insect:</Label>
+                <Label className="fs-4 fw-bold mt-2 mb-2"  for="newObservation">Type of Animal:</Label>
                 <Input type="text" className="fs-6" id="newObservation" placeholder="Name of Animal or Insect" onChange={(e) => setNewObservation(e.target.value)} required></Input>
-                <Label className="fs-4 fw-bold mt-2 mb-2">Classification: </Label>
+                <Label className="fs-4 fw-bold mt-2 mb-2">Animal Classification: </Label>
                 <Input type="text" className="fs-6" id="newClassification" placeholder="Ex: Mammal, Reptile, Bird, Insect" onChange={(e) => setNewClassification(e.target.value)}></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2"  for="newLocation">Observation Location:</Label>
                 <Input type="text" className="fs-6" id="newLocation" placeholder="City, State" onChange={(e) => setNewLocation(e.target.value)}  ></Input>
