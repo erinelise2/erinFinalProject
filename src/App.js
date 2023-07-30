@@ -9,6 +9,7 @@ import FieldGuide from './Pages/FieldGuide';
 import Contact from './Pages/Contact';
 import Footer from './Components/Footer';
 import UpdateForm from './Components/UpdateForm';
+import NotFound from './Pages/NotFound';
 
 // Navbar templates: https://react-bootstrap.netlify.app/docs/components/navbar/
 
@@ -26,7 +27,7 @@ function App() {
         <Route path="/conservationgroups" element={<ConservationGroups />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/hidden" element={<UpdateForm />}></Route>
-
+        <Route path='*' element={<NotFound />}/>
     </Routes>
     </Container>
     </div>
