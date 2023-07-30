@@ -53,10 +53,11 @@ export default function FieldGuide() {
       </Container>
       <p className="fieldguide-text fs-4 fw-bold">This Field Guide keeps track of all of the animals you have seen.</p>
       <p className="fieldguide-instructions fw-bold text-center"> You can edit or delete your observations using the buttons on the table.</p>
+      {/* I need the table headers here and then append the data to the rows.... */}
       {observations.map((observation, index) => (
         <div className="mapContainer" key={index}>
           <div>
-          <table className="fieldguide">
+          <table className="fieldguide border table table-bordered table-striped table-responsive table-hover">
           <thead className="fieldguide-head fs-5 fw-bold border">
             {/* this needs to move above the mapContainer div to append each into a table, but when I do that, the table cells do not reach the same widths and the background is wrong. */}
             <tr>
@@ -70,7 +71,7 @@ export default function FieldGuide() {
               <th>Remove</th>
             </tr>
           </thead>
-          <tbody className="border-white">
+          <tbody>
             <tr>
               <td><Button className="fieldguide-btn btn border-secondary mb-2 mt-2 border-white" onClick={() => EditBtnModal() }>✐</Button></td>
               {/* would I put the modal inside of this return and have two returns? deleting the editbtbmodal component? */}

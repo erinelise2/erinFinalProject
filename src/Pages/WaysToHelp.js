@@ -12,11 +12,9 @@ export default function WaysToHelp() {
       <h1 className="ways-header">You Can Help Protect Wildlife and Wildspaces</h1><br></br>
       <h4 className="ways-list-header">Things to Remember When You Are Exploring:</h4><br></br>
       <Container>
-        <Row>
-          <Col>
-            <Image src={protect} className="img-fluid mb-4" rounded alt="large words respect, protect, connect outlined in green with transparent center"></Image>
-          </Col>
-        </Row>
+
+            <Image src={protect} className="img-fluid mb-4" rounded alt="large words respect, protect, connect outlined in white with transparent center"></Image>
+
       </Container>
         <ul>
           <li className="ways-list"><b>Respect</b>  
