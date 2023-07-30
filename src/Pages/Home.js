@@ -20,21 +20,23 @@ export default function Home() {
         <Container className="mt-4 mb-4">
         <Row>
           <Col>
-            <Image src={racoon} className="img-fluid m-1" rounded alt="image of baby raccoon walking on green grass"></Image>
+            <Image src={racoon} className="img-fluid m-1 border border-white border" rounded alt="image of baby raccoon walking on green grass"></Image>
           </Col>
           <Col>
-            <Image src={hawk} className="img-fluid m-1" rounded alt="image of hawk in sky"></Image>
+            <Image src={hawk} className="img-fluid m-1 border border-white border" rounded alt="image of hawk in sky"></Image>
           </Col>
           <Col>
-            <Image src={coyote} className="img-fluid m-1" rounded alt="image of coyote in field"></Image>
+            <Image src={coyote} className="img-fluid m-1 border border-white border" rounded alt="image of coyote in field"></Image>
           </Col>
         </Row>
       </Container>
-        <h4 className="home-text">This Field Guide will allow you to document your observations of animals, insects, spiders, and plants as you explore the world. Remember to always take care when observing wildlife. Maintain a safe and respectful distance, and remember to look with your eyes and not your hands. We want to help keep nature wild by not disturbing the amazing creatures that cross our paths. </h4>
       </div>
       <div>
         <h2 className="home-header mt-3 mb-3">Use The Form Below To Record What You See:</h2>
         <ObservationForm />
+      </div>
+      <div className="mt-4 form-container border border-white border-3">
+        <h4 className="home-text p-4">This Field Guide will allow you to document your observations of animals, insects, spiders, and plants as you explore the world. Remember to always take care when observing wildlife. Maintain a safe and respectful distance, and remember to look with your eyes and not your hands. We want to help keep nature wild by not disturbing the amazing creatures that cross our paths. </h4>
       </div>
       <div>
         <Definitions />
