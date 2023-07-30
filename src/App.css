@@ -214,6 +214,12 @@ a:link {
   background-color: rgb(148, 166, 148);
 }
 
+.definitions-div {
+  background-color: rgb(128, 121, 58);
+  color: white;
+}
+
+
 .footer-text {
   background-color: rgb(104, 139, 104);
   font-family: 'Shadows Into Light', cursive;

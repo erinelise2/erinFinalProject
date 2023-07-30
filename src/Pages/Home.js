@@ -7,6 +7,7 @@ import ObservationForm from '../Components/ObservationForm';
 import racoon from "../Images/babyracoon.jpeg";
 import coyote from "../Images/coyote.jpeg";
 import hawk from "../Images/hawk.jpeg";
+import Definitions from '../Components/Definitions';
 
 // import { Button, Form, Input, Label } from "reactstrap";
 
@@ -36,7 +37,8 @@ export default function Home() {
         <ObservationForm />
       </div>
       <div>
-    </div>
+        <Definitions />
+      </div>
     </>
   );
 }
