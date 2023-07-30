@@ -57,9 +57,9 @@ export default function ObservationForm () {
                 <Label className="fs-4 fw-bold p-2">Classification: </Label>
                 <Input type="text" className="fs-6" id="newClassification" placeholder="Ex: Mammal, Reptile, Bird, Insect" onChange={(e) => setNewClassification(e.target.value)}></Input>
                 <Label className="fs-4 fw-bold p-2" for="newLocation">Observation Location:</Label>
-                <Input type="text" className="fs-6" id="newLocation" placeholder="City, State" requireonChange={(e) => setNewLocation(e.target.value)} required ></Input>
+                <Input type="text" className="fs-6" id="newLocation" placeholder="City, State" onChange={(e) => setNewLocation(e.target.value)}  ></Input>
                 <Label className="fs-4 fw-bold p-2">Type of Location: </Label> 
-                <Input type="text" className="fs-6" id="newLocation" placeholder="Ex: Field, Mountain, Sky, Ocean" onChange={(e) => setNewLocationType(e.target.value)}></Input>
+                <Input type="text" className="fs-6" id="newLocationType" placeholder="Ex: Field, Mountain, Sky, Ocean" onChange={(e) => setNewLocationType(e.target.value)}></Input>
                 <Label className="fs-4 fw-bold p-2" for="newDate">Observation Date:</Label>
                 <Input className="fs-6" id="newDate" type="Date" required onChange={(e) => setNewDate(e.target.value)}></Input>
                 <Label className="fs-4 fw-bold p-2">Time of Day: </Label> 
