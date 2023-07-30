@@ -72,7 +72,7 @@ export default function FieldGuide() {
           </thead>
           <tbody className="border-white">
             <tr>
-              <td><Button className="fieldguide-btn btn border-secondary mb-2 border-white" onClick={() => EditBtnModal() }>✐</Button></td>
+              <td><Button className="fieldguide-btn btn border-secondary mb-2 mt-2 border-white" onClick={() => EditBtnModal() }>✐</Button></td>
               {/* would I put the modal inside of this return and have two returns? deleting the editbtbmodal component? */}
               <td>{observation.observation}</td>
               <td>{observation.classification}</td>
@@ -80,7 +80,7 @@ export default function FieldGuide() {
               <td>{observation.locationtype}</td>
               <td>{observation.timeofday}</td>
               <td>{observation.date}</td>
-              <td><Button className="fieldguide-btn btn border-secondary mb-2 border-white" onClick={() => deleteObservation(observation.id)}>🗑</Button></td>
+              <td><Button className="fieldguide-btn btn border-secondary mb-2 mt-2 border-white" onClick={() => deleteObservation(observation.id)}>🗑</Button></td>
             </tr>
           </tbody>
           </table>

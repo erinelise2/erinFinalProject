@@ -132,6 +132,13 @@ a:link {
   text-align: center;
 }
 
+/* Want the table to take up more width too... and for the columns to also have borders, maybe? */
+.mapContainer {
+  display: flex;
+  justify-content: center;
+  border: white;
+}
+
 .fieldguide-head {
   text-align: center;
   flex: auto;
