@@ -148,22 +148,24 @@ a:link {
   text-shadow: 1px 1px 1px white;
 }
 
-.fieldguide-header {
+.form-container {
+  background:rgb(128, 121, 58);
+  color: white;
   text-align: center;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px rgb(201, 254, 197);
 }
 
-.fieldguide-text {
+.fieldguide-header {
   text-align: center;
+  font-weight: bolder;
+  /* text-shadow: 1px 1px 1px rgb(201, 254, 197); */
 }
 
 /* Want the table to take up more width too... and for the columns to also have borders, maybe? */
-.mapContainer {
+/* .mapContainer {
   display: flex;
   justify-content: center;
   border: white;
-}
+} */
 
 .fieldguide-head {
   text-align: center;
@@ -175,12 +177,6 @@ a:link {
 .fieldguide-btn {
   background-color: rgb(148, 166, 148);
   color: white;
-}
-
-.fieldguide {
-  background:rgb(128, 121, 58);
-  color: white;
-  text-align: center;
 }
 
 .contact-container {
