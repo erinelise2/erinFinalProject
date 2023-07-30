@@ -57,20 +57,20 @@ export default function UpdateForm () {
     return (
         <div className="text-center">
             <Form className="border border-3 border-white p-2 udpate-form">
-                <h3 className='header m-2 p-1 fs-1 border-bottom border-3 border-white'><span>Update Field Guide Observation</span></h3>
-                <Label className="fs-4 fw-bold p-2" for="updatedObservation">Edit Observation</Label>
+                <h3 className='header m-2 p-2 fs-1 border-bottom border-3 border-white'><span>Update Field Guide Observation</span></h3>
+                <Label className="fs-4 fw-bold mt-2 mb-2" for="updatedObservation">Edit Observation</Label>
                 <Input type="text" className="fs-6" id="updatedObservation" placeholder="Name of Animal or Insect" required onChange={(e) => setUpdatedObservation(e.target.value)}></Input>      
-                <Label className="fs-4 fw-bold p-2">Edit Classification</Label>
+                <Label className="fs-4 fw-bold mt-2 mb-2">Edit Classification</Label>
                 <Input type="text" className="fs-6" id="updatedClassification" placeholder="Ex: Mammal, Reptile, Bird, Insect" required onChange={(e) => setUpdatedClassification(e.target.value)}></Input>
-                <Label className="fs-4 fw-bold p-2">Edit Location</Label>
+                <Label className="fs-4 fw-bold mt-2 mb-2">Edit Location</Label>
                 <Input type="text" className="fs-6" id="updatedLocation" placeholder="City, State" required onChange={(e) => setUpdatedLocation(e.target.value)}></Input>
-                <Label className="fs-4 fw-bold p-2">Edit Location Type</Label>
+                <Label className="fs-4 fw-bold mt-2 mb-2">Edit Location Type</Label>
                 <Input type="text" className="fs-6" id="updatedLocationType" placeholder="Ex: Field, Mountain, Sky, Ocean" required onChange={(e) => setUpdatedLocationType(e.target.value)}></Input>
-                <Label className="fs-4 fw-bold p-2">Edit Date</Label>
+                <Label className="fs-4 fw-bold mt-2 mb-2">Edit Date</Label>
                 <Input type="date" className="fs-6" id="updatedDate" required onChange={(e) => setUpdatedDate(e.target.value)}></Input>
-                <Label className="fs-4 fw-bold p-2">Edit Time Of Day</Label>
+                <Label className="fs-4 fw-bold mt-2 mb-2">Edit Time Of Day</Label>
                 <Input type="text" className="fs-6" id="updatedTimeOfDay" placeholder="Ex: Morning, Afternoon, Evening, Night" required onChange={(e) => setUpdatedTimeOfDay(e.target.value)}></Input>
-                <Button className='btn btn-sm new-btn border border-1 rounded-pill m-4 p-3 fw-bolder text-white fs-5 secondary' id="updateObservation" onClick={(e) => updateObservation(e, observations)}>Update Observation ✐</Button>
+                <Button className='btn btn-sm new-btn border border-1 rounded-pill mt-3 mb-2 p-3 fw-bolder text-white fs-5 secondary' id="updateObservation" onClick={(e) => updateObservation(e, observations)}>Update Observation ✐</Button>
             </Form>
         </div>
     );
