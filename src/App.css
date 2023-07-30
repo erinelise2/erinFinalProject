@@ -2,12 +2,12 @@
   font-family: 'Roboto Condensed', sans-serif;
   /* background: linear-gradient(to bottom, rgb(236, 229, 167), rgb(205, 197, 130), rgb(240, 226, 107), rgb(128, 121, 58)); */
   /* background-image: url("./Images/background.png"); */
-  color: rgb(104, 139, 104);
+  color: rgb(74, 95, 74);
 }
 
 /* start of css for shimmer */
 .shimmer {
-  position: absolute;
+  position: auto;
   top: -50%;
   left: -50%;
   width: 200%;
@@ -16,7 +16,7 @@
   animation: shimmer 5s;
   animation-iteration-count: 2;
   transform: rotate(90deg);
-  z-index: -1;
+  z-index: 0;
 }
 @keyframes shimmer {
   0% {transform: translateX(-50%) rotate(45deg);}
@@ -52,13 +52,13 @@ a:link {
 }
 
 .observation-form {
-  background:rgb(128, 121, 58);
+  background:rgb(74, 95, 74);
   color: white;
   margin: auto;
 }
 
 .update-form {
-  background:rgb(128, 121, 58);
+  background:rgb(74, 95, 74);
   color: white;
   margin: auto;
 }
@@ -70,7 +70,7 @@ a:link {
 }
 
 .ways-container {
-  background:rgb(128, 121, 58);
+  background:rgb(74, 95, 74);
 }
 
 .ways-header {
@@ -97,7 +97,7 @@ a:link {
 }
 
 .conservation-container {
-  background:rgb(128, 121, 58);
+  background:rgb(74, 95, 74);
   color: white;
 }
 
@@ -153,7 +153,7 @@ a:link {
 }
 
 .form-container {
-  background:rgb(128, 121, 58);
+  background:rgb(74, 95, 74);
   color: white;
   text-align: center;
 }
@@ -184,7 +184,7 @@ a:link {
 }
 
 .contact-container {
-  background:rgb(128, 121, 58);
+  background:rgb(74, 95, 74);
 }
 
 .contact-header {
@@ -215,10 +215,9 @@ a:link {
 }
 
 .definitions-div {
-  background-color: rgb(128, 121, 58);
+  background:rgb(74, 95, 74);
   color: white;
 }
-
 
 .footer-text {
   color: rgba(255, 255, 255, 0.5);

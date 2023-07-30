@@ -70,7 +70,7 @@ export default function UpdateForm () {
                 <Input type="date" className="fs-6" id="updatedDate" required onChange={(e) => setUpdatedDate(e.target.value)}></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2">Edit Time Of Day</Label>
                 <Input type="text" className="fs-6" id="updatedTimeOfDay" placeholder="Ex: Morning, Afternoon, Evening, Night" required onChange={(e) => setUpdatedTimeOfDay(e.target.value)}></Input>
-                <Button className='btn btn-sm new-btn border border-1 rounded-pill mt-3 mb-2 p-3 fw-bolder text-white fs-5 secondary' id="updateObservation" onClick={(e) => updateObservation(e, observations)}>Update Observation ✐</Button>
+                <Button className="ob-btn btn mt-3 mb-2 fs-4 border-white"  id="updateObservation" onClick={(e) => updateObservation(e, observations)}>Update Observation ✐</Button>
             </Form>
         </div>
     );
