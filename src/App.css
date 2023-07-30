@@ -96,35 +96,39 @@ a:link {
   font-size: large;
 }
 
-/* .conservation-container {
+.conservation-container {
   background:rgb(128, 121, 58);
-} */
+  color: white;
+}
 
 .conservation-header {
   text-align: center;
-  /* color: white; */
   font-weight: bolder;
-  text-shadow: 1px 1px 1px rgb(201, 254, 197);
+  /* text-shadow: 1px 1px 1px rgb(201, 254, 197); */
 }
 
 .conservation-text {
   text-align: center;
-  /* color: white; */
-  text-shadow: 1px 1px 1px rgb(201, 254, 197);
+  /* text-shadow: 1px 1px 1px rgb(201, 254, 197); */
   font-weight: bolder;
-  font-size: x-large;
+  font-size: large;
 }
 
 .conservation-list {
   list-style-type: none;
   text-align: center;
   font-size: x-large;
-  text-shadow: 1px 1px 1px rgb(201, 254, 197);
-  background:rgb(128, 121, 58, 0.1);
+  text-shadow: 1px 1px 1px rgb(104, 139, 104);
+  background:rgb(104, 139, 104, 0.5);
 }
 
 .cons-img {
   background:rgb(128, 121, 58, 0.1);
+  max-width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  border: white;
 }
 
 .con-link:hover {

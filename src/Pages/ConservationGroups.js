@@ -7,15 +7,15 @@ import conservation from "../Images/conservation.png";
 export default function ConservationGroups() {
   return (
     <>
-    <div className="conservation-container">
+    <div className="conservation-container fieldguide-app border border-white border-3 pt-4 p-2 mt-4">
       <h1 className="conservation-header mt-3 mb-3">Conservation Groups</h1>
       <Row>
-          <Col>
-            <Image src={conservation} className="img-fluid mb-4 cons-img" rounded alt="Unless Quote inside a drawing of the world with handdrawn animal around the world"></Image>
+          <Col> 
+            <Image src={conservation} className="mb-4 cons-img img-fluid" alt="Unless Quote inside a drawing of the world with handdrawn animal around the world"></Image>
           </Col>
       </Row>
-      <h4 className="conservation-text">Click on the links below to learn more about some of the amazing organizations working to protect our wildlife all around our world!</h4>
-      <ul className="conservation-list">
+      <h4 className="conservation-text m-2 pb-2">Click on the links below to learn more about some of the amazing organizations working to protect our wildlife all around our world!</h4>
+      <ul className="conservation-list m-4 pe-4 ps-4">
         <li><a href="https://www.nature.org/en-us/" className="con-link">The Nature Conservancy</a></li>
         <li><a href="https://gorillafund.org/" className="con-link">Dian Fossey Gorilla Fund</a></li>
         <li><a href="https://turtlesurvival.org" className="con-link">Turtle Survival Alliance</a></li>
