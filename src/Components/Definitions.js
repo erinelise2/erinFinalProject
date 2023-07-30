@@ -41,7 +41,7 @@ export default function Definitions() {
             <b>Types of Locations:</b>
             <ul>
               <li>
-                Wildlife lives in all corners of our world, but not every corner is the same. Here you can be as specific as you need. For example, you can type in that the rabbit you saw was in your friend yard, or you can say it was on the grass. If you are in a park, you can name or describe the park.
+                Wildlife lives in all corners of our world, but not every corner is the same. Here you can be as specific as you need. For example, you can type in that the rabbit you saw was in your front yard, or you can say it was on the grass. If you are in a park, you can name or describe the park.
               </li>
             </ul>
           </li>
