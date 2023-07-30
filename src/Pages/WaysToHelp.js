@@ -8,7 +8,7 @@ import protect from "../Images/protect.png";
 export default function WaysToHelp() {
   return (
     <>
-    <div className="ways-container">
+    <div className="ways-container fieldguide-app border border-white border-3 pt-4 p-2 mt-4">
       <h1 className="ways-header">You Can Help Protect Wildlife and Wildspaces</h1><br></br>
       <h4 className="ways-list-header">Things to Remember When You Are Exploring:</h4><br></br>
       <Container>
