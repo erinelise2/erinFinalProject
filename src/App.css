@@ -1,16 +1,11 @@
 .App {
-  font-family: 'Shadows Into Light', cursive;
-  background: linear-gradient(rgb(236, 229, 167), rgb(205, 197, 130), rgb(240, 226, 107), rgb(128, 121, 58));
+  font-family: 'Roboto Condensed', sans-serif;
+  background-image: linear-gradient(to bottom, rgb(236, 229, 167), rgb(205, 197, 130), rgb(240, 226, 107), rgb(128, 121, 58));
   color: rgb(104, 139, 104);
 }
 
 .navigation-bar {
   background-color: rgb(104, 139, 104);
-  color: black;
-}
-
-.nav-list {
-  text-align: left;
 }
 
 a:hover {
@@ -24,16 +19,6 @@ a:visited {
 a:link {
    color: white;
 }
-
-/* .nav-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  background-color: rgb(104, 139, 104);
-} */
 
 .home-header {
   text-align: center;
@@ -50,6 +35,12 @@ a:link {
   background:rgb(128, 121, 58);
   color: white;
   margin: auto;
+}
+
+/* observation button styling not working */
+
+.ob-btn {
+  background-color: rgb(104, 139, 104);
 }
 
 .ways-container {
@@ -175,6 +166,15 @@ a:link {
 
 .contact-form {
   text-align: center;
+}
+
+/* these input and btn css things are not working */
+.contact-input [type=text] {
+  background-color: rgb(148, 166, 148);
+}
+
+.contact-btn {
+  background-color: rgb(73, 115, 73);
 }
 
 .contact-btn:hover {

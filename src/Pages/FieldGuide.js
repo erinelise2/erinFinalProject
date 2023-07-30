@@ -73,6 +73,7 @@ export default function FieldGuide() {
           <tbody className="border-white">
             <tr>
               <td><Button className="fieldguide-btn btn border-secondary mb-2 border-white" onClick={() => EditBtnModal() }>✐</Button></td>
+              {/* would I put the modal inside of this return and have two returns? deleting the editbtbmodal component? */}
               <td>{observation.observation}</td>
               <td>{observation.classification}</td>
               <td>{observation.location}</td>

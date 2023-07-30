@@ -15,6 +15,7 @@ export default function Home() {
     <>
     <div>
         <h1 className="home-header">Let's Explore Wildlife and Wild Places!</h1>
+{/* website for photo row https://react-bootstrap.netlify.app/docs/components/images/ */}
         <Container className="mt-4 mb-4">
         <Row>
           <Col>

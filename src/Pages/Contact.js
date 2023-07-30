@@ -10,10 +10,10 @@ export default function Contact() {
             </h4>
                 <Form className="contact-form">
                     <p className="contact-form-text">Please fill out the form below and a member of our team will reach out to you. <br></br> Thank you for your interest in our work!</p>
-                    <Input className="mb-2" type="text" name="firstName" placeholder="First Name" required> </Input>
-                    <Input className="mb-2" type="text" name="lastName" placeholder="Last Name"> </Input>
-                    <Input className="mb-2" type="text" name="email" placeholder="Email" required> </Input>
-                    <Input className="mb-2" type="text area" name="notes" placeholder="Is there anything you would like to let us know?"></Input>
+                    <Input className="contact-input mb-2" type="text" name="firstName" placeholder="First Name" required> </Input>
+                    <Input className="contact-input mb-2" type="text" name="lastName" placeholder="Last Name"> </Input>
+                    <Input className="contact-input mb-2" type="text" name="email" placeholder="Email" required> </Input>
+                    <Input className="contact-input mb-2" type="text area" name="notes" placeholder="Is there anything you would like to let us know?"></Input>
                     <Input className="mb-2 contact-btn rounded" type="submit" value="Submit"> </Input>
                 </Form><br></br>
         </div>
