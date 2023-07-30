@@ -21,6 +21,14 @@ export default function UpdateForm () {
     getObservations()
   }, [])
 
+  function getObservations() {
+    fetch(API_URL)
+      .then((data) => data.json())
+      .then((data) => {
+        setObservations(data)
+        console.log(data)
+      })
+  }
 
         function updateObservation(e, observationObject) {
             e.preventDefault()
@@ -47,22 +55,22 @@ export default function UpdateForm () {
           )
           }
     return (
-        <div>
-            <Form className="m-5 border">
-                <h3 className='header m-2'><span class="border-bottom row border-3 p-1 fs-1">Update Field Guide Observation</span></h3>
-                <Label className="fs-4 fw-bold p-2">Edit Observation</Label>
-                <Input type="text" className="fs-5" id="updatedObservation" placeholder="Name of Animal or Insect" onChange={(e) => setUpdatedObservation(e.target.value)}></Input>      
+        <div className="text-center">
+            <Form className="border border-3 border-white p-2 udpate-form">
+                <h3 className='header m-2 p-1 fs-1 border-bottom border-3 border-white'><span>Update Field Guide Observation</span></h3>
+                <Label className="fs-4 fw-bold p-2" for="updatedObservation">Edit Observation</Label>
+                <Input type="text" className="fs-6" id="updatedObservation" placeholder="Name of Animal or Insect" required onChange={(e) => setUpdatedObservation(e.target.value)}></Input>      
                 <Label className="fs-4 fw-bold p-2">Edit Classification</Label>
-                <Input type="text" className="fs-5" id="updatedClassification" placeholder="Ex: Mammal, Reptile, Bird, Insect" onChange={(e) => setUpdatedClassification(e.target.value)}></Input>
+                <Input type="text" className="fs-6" id="updatedClassification" placeholder="Ex: Mammal, Reptile, Bird, Insect" required onChange={(e) => setUpdatedClassification(e.target.value)}></Input>
                 <Label className="fs-4 fw-bold p-2">Edit Location</Label>
-                <Input type="text" className="fs-5" id="updatedLocation" placeholder="City, State" onChange={(e) => setUpdatedLocation(e.target.value)}></Input>
+                <Input type="text" className="fs-6" id="updatedLocation" placeholder="City, State" required onChange={(e) => setUpdatedLocation(e.target.value)}></Input>
                 <Label className="fs-4 fw-bold p-2">Edit Location Type</Label>
-                <Input type="text" className="fs-5" id="updatedLocationType" placeholder="Ex: Field, Mountain, Sky, Ocean" onChange={(e) => setUpdatedLocationType(e.target.value)}></Input>
+                <Input type="text" className="fs-6" id="updatedLocationType" placeholder="Ex: Field, Mountain, Sky, Ocean" required onChange={(e) => setUpdatedLocationType(e.target.value)}></Input>
                 <Label className="fs-4 fw-bold p-2">Edit Date</Label>
-                <Input type="date" className="fs-5" id="updatedDate" onChange={(e) => setUpdatedDate(e.target.value)}></Input>
+                <Input type="date" className="fs-6" id="updatedDate" required onChange={(e) => setUpdatedDate(e.target.value)}></Input>
                 <Label className="fs-4 fw-bold p-2">Edit Time Of Day</Label>
-                <Input type="text" className="fs-5" id="updatedTimeOfDay" placeholder="Ex: Morning, Afternoon, Evening, Night" onChange={(e) => setUpdatedTimeOfDay(e.target.value)}></Input>
-                <Button className='btn btn-sm new-btn border border-1 rounded-pill m-4 p-3 fw-bolder text-white fs-5 secondary' id="updateObservation" onClick={(e) => updateObservation(e, observation)}>Update Observation ✐</Button>
+                <Input type="text" className="fs-6" id="updatedTimeOfDay" placeholder="Ex: Morning, Afternoon, Evening, Night" required onChange={(e) => setUpdatedTimeOfDay(e.target.value)}></Input>
+                <Button className='btn btn-sm new-btn border border-1 rounded-pill m-4 p-3 fw-bolder text-white fs-5 secondary' id="updateObservation" onClick={(e) => updateObservation(e, observations)}>Update Observation ✐</Button>
             </Form>
         </div>
     );

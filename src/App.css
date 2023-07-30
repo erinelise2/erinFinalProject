@@ -1,6 +1,7 @@
 .App {
   font-family: 'Roboto Condensed', sans-serif;
-  background-image: linear-gradient(to bottom, rgb(236, 229, 167), rgb(205, 197, 130), rgb(240, 226, 107), rgb(128, 121, 58));
+  /* background: linear-gradient(to bottom, rgb(236, 229, 167), rgb(205, 197, 130), rgb(240, 226, 107), rgb(128, 121, 58)); */
+  background-image: linear-gradient(to bottom, rgb(236, 229, 167), rgb(205, 197, 130), rgb(240, 226, 107), rgb(128, 121, 58)), url("./Images/background.png");
   color: rgb(104, 139, 104);
 }
 
@@ -51,6 +52,12 @@ a:link {
 }
 
 .observation-form {
+  background:rgb(128, 121, 58);
+  color: white;
+  margin: auto;
+}
+
+.update-form {
   background:rgb(128, 121, 58);
   color: white;
   margin: auto;

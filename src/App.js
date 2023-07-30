@@ -8,6 +8,7 @@ import ConservationGroups from './Pages/ConservationGroups';
 import FieldGuide from './Pages/FieldGuide';
 import Contact from './Pages/Contact';
 import Footer from './Components/Footer';
+import UpdateForm from './Components/UpdateForm';
 
 // Navbar templates: https://react-bootstrap.netlify.app/docs/components/navbar/
 
@@ -24,6 +25,8 @@ function App() {
         <Route path="/waystohelp" element={<WaysToHelp />}></Route>
         <Route path="/conservationgroups" element={<ConservationGroups />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/hidden" element={<UpdateForm />}></Route>
+
     </Routes>
     </Container>
     </div>
