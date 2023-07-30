@@ -120,6 +120,7 @@ a:link {
   font-size: x-large;
   text-shadow: 1px 1px 1px rgb(104, 139, 104);
   background:rgb(104, 139, 104, 0.5);
+  border: solid;
 }
 
 .cons-img {
@@ -136,6 +137,8 @@ a:link {
   text-decoration: none;
   font-weight: bolder;
   background: rgba(255, 255, 255, 0.5);
+  border: solid;
+  padding: 4pt;
 }
 
 .con-link:link {
@@ -179,7 +182,7 @@ a:link {
 }
 
 .fieldguide-btn {
-  background-color: rgb(148, 166, 148);
+  background-color: rgb(104, 139, 104);
   color: white;
 }
 
@@ -207,7 +210,7 @@ a:link {
 }
 
 .contact-btn {
-  background-color: rgb(73, 115, 73);
+  background-color: rgb(104, 139, 104);
 }
 
 .contact-btn:hover {
@@ -217,6 +220,16 @@ a:link {
 .definitions-div {
   background:rgb(74, 95, 74);
   color: white;
+}
+
+.link {
+  background-color: rgb(104, 139, 104);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  background-color: rgb(148, 166, 148);
 }
 
 .footer-text {
