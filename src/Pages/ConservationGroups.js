@@ -8,7 +8,7 @@ export default function ConservationGroups() {
   return (
     <>
     <div className="conservation-container fieldguide-app border border-white border-3 pt-4 p-2 mt-4">
-      <h1 className="conservation-header mt-3 mb-3">Conservation Groups</h1>
+      <h1 className="conservation-header mb-3">Conservation Groups</h1>
       <Row>
           <Col> 
             <Image src={conservation} className="mb-4 cons-img img-fluid" alt="Unless Quote inside a drawing of the world with handdrawn animal around the world"></Image>
