@@ -1,7 +1,7 @@
 export default function Definitions() {
     return (
         <div className="definitions-div  border border-3 border-white mt-4">
-        <h3 className="text-center mt-2">Some Helpful Definitions For Your Entries</h3>
+        <h3 className="text-center mt-2 border-bottom ms-4 me-4 border-2 p-2 fw-bold">Some Helpful Definitions For Your Entries</h3>
         <ul>
           <li>
             Type of Animal: The scientific term of an animal is 

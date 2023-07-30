@@ -57,7 +57,7 @@ export default function UpdateForm () {
     return (
         <div className="text-center">
             <Form className="border border-3 border-white p-2 update-form">
-                <h3 className='header m-2 p-2 fs-1 border-bottom border-3 border-white'><span>Update Field Guide Observation</span></h3>
+                <h3 className='header m-2 p-2 fs-1 border-bottom border-3 border-white fw-4'><span>Update Field Guide Observation</span></h3>
                 <Label className="fs-4 fw-bold mt-2 mb-2" for="updatedObservation">Edit Type of Animal</Label>
                 <Input type="text" className="fs-6" id="updatedObservation" placeholder="Name of Animal or Insect" required onChange={(e) => setUpdatedObservation(e.target.value)}></Input>      
                 <Label className="fs-4 fw-bold mt-2 mb-2">Edit Animal Classification</Label>
