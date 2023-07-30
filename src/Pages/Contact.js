@@ -4,7 +4,7 @@ import { Button, Form, Input, Label } from "reactstrap";
 export default function Contact() {
     return (
     <>
-        <div className="contact-container">
+        <div className="contact-container fieldguide-app border border-white border-3 pt-4 p-2 mt-4">
             <h4 className="contact-header">
                 Contact Us
             </h4>
