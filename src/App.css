@@ -1,7 +1,7 @@
 .App {
   font-family: 'Roboto Condensed', sans-serif;
   /* background: linear-gradient(to bottom, rgb(236, 229, 167), rgb(205, 197, 130), rgb(240, 226, 107), rgb(128, 121, 58)); */
-  background-image: linear-gradient(to bottom, rgb(236, 229, 167), rgb(205, 197, 130), rgb(240, 226, 107), rgb(128, 121, 58)), url("./Images/background.png");
+  /* background-image: url("./Images/background.png"); */
   color: rgb(104, 139, 104);
 }
 
@@ -221,7 +221,7 @@ a:link {
 
 
 .footer-text {
-  background-color: rgb(104, 139, 104);
-  font-family: 'Shadows Into Light', cursive;
   color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: x-small;
 }
