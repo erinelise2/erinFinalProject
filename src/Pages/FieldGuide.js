@@ -71,7 +71,7 @@ export default function FieldGuide() {
               {observations.map((observation, index) => (
                 <tr key={index}>
                   <td><Button className="fieldguide-btn btn border-secondary mb-2 mt-2 border-white text-white fw-bolder" color="outline" type="submit"><Link className="text-dark link-btn" to="/hidden">✐</Link></Button></td>
-              {/* would I put the modal inside of this return and have two returns? deleting the editbtbmodal component? */}
+              {/* Ideally would like to have the edit button be a modal, but it can also go to the hidden page. To get it to work with the function, would I need to paste the update observation function above and call it like the delete? */}
                   <td>{observation.observation}</td>
                   <td>{observation.classification}</td>
                   <td>{observation.location}</td>

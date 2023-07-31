@@ -7,7 +7,7 @@ import ObservationForm from '../Components/ObservationForm';
 import racoon from "../Images/babyracoon.jpeg";
 import coyote from "../Images/coyote.jpeg";
 import hawk from "../Images/hawk.jpeg";
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 
 // import { Button, Form, Input, Label } from "reactstrap";
