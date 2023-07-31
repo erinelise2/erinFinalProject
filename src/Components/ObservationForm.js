@@ -9,7 +9,7 @@ export default function ObservationForm () {
     const [newClassification, setNewClassification] = useState('')
     const [newLocation, setNewLocation] = useState('')
     const [newLocationType, setNewLocationType] = useState('')
-    const [newDate, setNewDate] = useState('')
+    const [newDate, setNewDate] = useState(Date())
     const [newTimeOfDay, setNewTimeOfDay] = useState('')
 
     const API_URL = 
@@ -45,17 +45,35 @@ export default function ObservationForm () {
                 timeofday: newTimeOfDay,
               }),
             }).then(() => getObservations())
+            .then(clearForm())
             .catch((error) => {
               console.log(error)
             }
           )
           }
+// Edit clear form and enter in below
+        function clearForm(){
+            document.getElementById('newObservation').value = '';
+            document.getElementById('newClassification').value = '';
+            document.getElementById('newLocation').value = '';
+            document.getElementById('newLocationType').value = '';
+            document.getElementById('newTimeOfDay').value = '';
+            document.getElementById('newDate').value = Date();
+        }
+
     return (
         <div className="text-center">
             <Form className="border border-3 border-white p-2 observation-form">
             <h3 className='header m-2 p-2 fs-1 border-bottom border-3 border-white fw-bold'><span>Your Field Guide Entry Form ✐</span></h3>
                 <Label className="fs-4 fw-bold mt-2 mb-2"  for="newObservation">Type of Animal:</Label>
-                <Input type="text" className="fs-6" id="newObservation" placeholder="Name of Animal or Insect" onChange={(e) => setNewObservation(e.target.value)} required></Input>
+                <Input 
+                    type="text" 
+                    className="fs-6" 
+                    id="newObservation" 
+                    placeholder="Name of Animal or Insect" 
+                    onChange={(e) => setNewObservation(e.target.value)} 
+                    required>
+                </Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2">Animal Classification: </Label>
                 <Input type="text" className="fs-6" id="newClassification" placeholder="Ex: Mammal, Reptile, Bird, Insect" onChange={(e) => setNewClassification(e.target.value)} required></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2"  for="newLocation" >Observation Location:</Label>
@@ -66,7 +84,14 @@ export default function ObservationForm () {
                 <Input className="fs-6" id="newDate" type="Date" required onChange={(e) => setNewDate(e.target.value)} ></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2" >Time of Day: </Label> 
                 <Input type="text" className="fs-6" id="newTimeOfDay" placeholder="Ex: Morning, Afternoon, Evening, Night" onChange={(e) => setNewTimeOfDay(e.target.value)} required></Input>
-                <Button className="observation-button mt-4 mb-2 fs-5 border-white" id="submitObservation" color="light" type="submit" onClick={(e) => postNewObservation(e)} > Add Observation to Your Field Guide</Button>
+                <Button 
+                    className="observation-button mt-4 mb-2 fs-5 border-white" 
+                    id="submitObservation" 
+                    color="light" 
+                    type="submit" 
+                    onClick={(e) => postNewObservation(e)}>
+                     Add Observation to Your Field Guide
+                </Button>
                 <Button className="mt-4 mb-2 ms-2 fs-5 border-white" color="light" type="submit"><Link className="text-dark link-btn" to="/fieldguide">View Field Guide</Link></Button>
             </Form>
         </div>

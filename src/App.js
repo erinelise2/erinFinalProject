@@ -18,7 +18,7 @@ function App() {
   return (
     <>
     <div className="App">
-    <div class = "shimmer"> </div>
+    <div className = "shimmer"> </div>
     <Navigation />
     <Container>
     <Routes>

@@ -18,7 +18,7 @@ export default function Home() {
     <div>
         <h1 className="home-header">Let's Explore Wildlife and Wild Places!</h1>
 {/* website for photo row https://react-bootstrap.netlify.app/docs/components/images/ */}
-        <Container className="mt-4 mb-4">
+      <Container className="mt-4 mb-4">
         <Row>
           <Col>
             <Image src={racoon} className="img-fluid m-1 border border-white border" rounded alt="image of baby raccoon walking on green grass"></Image>
