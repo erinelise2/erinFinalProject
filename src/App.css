@@ -5,25 +5,6 @@
   color: rgb(74, 95, 74);
 }
 
-/* start of css for shimmer */
-.shimmer {
-  position: auto;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0) 100%);
-  animation: shimmer 5s;
-  animation-iteration-count: 2;
-  transform: rotate(90deg);
-  z-index: 0;
-}
-@keyframes shimmer {
-  0% {transform: translateX(-50%) rotate(45deg);}
-  100% {transform: translateX(50%) rotate(45deg);}
-}
-/* end css for shimmer */
-
 .navigation-bar {
   background-color: rgb(104, 139, 104);
 }
@@ -189,6 +170,7 @@ a:link {
 .link-btn {
   text-decoration: none;
 }
+
 .contact-container {
   background:rgb(74, 95, 74);
 }
