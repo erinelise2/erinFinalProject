@@ -53,15 +53,10 @@ export default function FieldGuide() {
       </Container>
       <div>
       <p className="fieldguide-text fs-5 fw-bold mt-4">This Field Guide keeps track of all of the animals you have seen.</p>
-
-      {/* I need the table headers here and then append the data to the rows.... */}
-      {observations.map((observation, index) => (
-        <div className="mapContainer" key={index}>
-          <div>
-          <table className="fieldguide border border-white border-3 table table-bordered table-striped table-responsive table-hover">
+      <div class="mapContainer row">
+        <table className="fieldguide border border-white border-3 table table-bordered table-striped table-responsive table-hover table-success">
           <thead className="fieldguide-head fs-5 fw-bold border">
-            {/* this needs to move above the mapContainer div to append each into a table, but when I do that, the table cells do not reach the same widths and the background is wrong. */}
-            <tr>
+          <tr>
               <th>Update</th>
               <th>Type of Animal</th>
               <th>Classification</th>
@@ -73,24 +68,22 @@ export default function FieldGuide() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><Button className="fieldguide-btn btn border-secondary mb-2 mt-2 border-white" onClick={() => EditBtnModal() }>✐</Button></td>
+              {observations.map((observation, index) => (
+                <tr key={index}>
+                  <td><Button className="fieldguide-btn btn border-secondary mb-2 mt-2 border-white" onClick={() => EditBtnModal() }>✐</Button></td>
               {/* would I put the modal inside of this return and have two returns? deleting the editbtbmodal component? */}
-              <td>{observation.observation}</td>
-              <td>{observation.classification}</td>
-              <td>{observation.location}</td>
-              <td>{observation.locationtype}</td>
-              <td>{observation.timeofday}</td>
-              <td>{observation.date}</td>
-              <td><Button className="fieldguide-btn btn border-secondary mb-2 mt-2 border-white" onClick={() => deleteObservation(observation.id)}>🗑</Button></td>
+                  <td>{observation.observation}</td>
+                  <td>{observation.classification}</td>
+                  <td>{observation.location}</td>
+                  <td>{observation.locationtype}</td>
+                  <td>{observation.timeofday}</td>
+                  <td>{observation.date}</td>
+                  <td><Button className="fieldguide-btn btn border-secondary mb-2 mt-2 border-white" onClick={() => deleteObservation(observation.id)}>🗑</Button></td>
             </tr>
+              ))}
           </tbody>
           </table>
-          
-          </div>
-
         </div>
-      ))}
     </div>
     <div>
     <hr className="me-3 ms-3 border border-white"></hr>
