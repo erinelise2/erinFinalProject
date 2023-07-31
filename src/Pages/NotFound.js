@@ -10,7 +10,9 @@ export default function NotFound() {
         <Link className="link text-white border border-2 p-2 rounded" to="/">Return Home</Link>
         </div>
         </div>
-
+        {/* <div className="form-container border border-white border-3">
+            <h4 className="mt-4 pe-2 ps-2 fw-bold">While you are here, enjoy some random facts about cats... </h4>
+        </div> */}
         </>
     )
 }

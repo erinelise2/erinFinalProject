@@ -18,6 +18,7 @@ function App() {
   return (
     <>
     <div className="App">
+    <div class = "shimmer"> </div>
     <Navigation />
     <Container>
     <Routes>
