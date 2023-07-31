@@ -72,6 +72,7 @@ export default function UpdateForm () {
                 <Input type="date" className="fs-6" id="updatedDate" required onChange={(e) => setUpdatedDate(e.target.value)}></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2">Edit Time Of Day</Label>
                 <Input type="text" className="fs-6" id="updatedTimeOfDay" placeholder="Ex: Morning, Afternoon, Evening, Night" required onChange={(e) => setUpdatedTimeOfDay(e.target.value)}></Input>
+{/* This button is not working */}
                 <Button className="ob-btn btn mt-4 mb-2 fs-5 border-white"  id="updateObservation" color="light" type="submit" onClick={(e) => updateObservation(e, observations)}>Update Observation ✐</Button>
                 <Button className="mt-4 mb-2 ms-2 fs-5 border-white" color="light" type="submit"><Link className="text-dark link-btn" to="/fieldguide">Return To Field Guide</Link></Button>
                 <div className="text-center mt-4 mb-4 fs-5">
