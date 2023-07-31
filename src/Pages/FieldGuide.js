@@ -37,7 +37,7 @@ export default function FieldGuide() {
   return (   
     <> 
     <div className="form-container fieldguide-app border border-white border-3 pt-4 p-2 mt-4">
-      <h1 className="fieldguide-header mb-4">Your Field Notes</h1>
+      <h1 className="fieldguide-header mb-4">Your Field Guide</h1>
       <Container>
         <Row>
           <Col>
@@ -87,7 +87,8 @@ export default function FieldGuide() {
     </div>
     <div>
     <hr className="me-3 ms-3 border border-white"></hr>
-    <p className="fw-bold text-center text-white"> You can edit or delete your observations using the buttons on the table.</p>
+    <p className="fw-bold text-center text-white"> You can edit or delete your observations using the buttons on the table. <br></br>Click on the animal name to add additional notes.</p>
+    {/* Is there a way to create a page for each animal that they can add notes to? */}
     </div>
     <div className="text-center m-4">
         <Link className="link text-white border border-2 p-2 rounded" to="/">Return Home To Add A New Entry</Link>
