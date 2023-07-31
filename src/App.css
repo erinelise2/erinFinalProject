@@ -65,7 +65,7 @@ a:link {
 
 /* observation button styling not working */
 
-.ob-btn {
+.observation-button {
   background-color: rgb(104, 139, 104);
 }
 
@@ -186,6 +186,9 @@ a:link {
   color: white;
 }
 
+.link-btn {
+  text-decoration: none;
+}
 .contact-container {
   background:rgb(74, 95, 74);
 }

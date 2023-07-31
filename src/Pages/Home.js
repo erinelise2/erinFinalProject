@@ -38,10 +38,11 @@ export default function Home() {
       </div>
       <div className="mt-4 form-container border border-white border-3">
         <h4 className="home-text p-4">This Field Guide will allow you to document your observations of animals, insects, spiders, and plants as you explore the world. Remember to always take care when observing wildlife. Maintain a safe and respectful distance, and remember to look with your eyes and not your hands. We want to help keep nature wild by not disturbing the amazing creatures that cross our paths. </h4>
+      <div className="text-center mb-4 fs-5">
+        <Link className="link text-white border border-2 p-2 rounded" to="/definitions">Click Here Form Entry Help and Definitions</Link>
       </div>
-      <div className="text-center mt-4">
-      <Link className="link text-white border border-2 p-2 rounded" to="/definitions">Click Here Form Entry Help</Link>
       </div>
+
     </>
   );
 }

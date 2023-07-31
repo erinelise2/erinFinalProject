@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Form, Input, Label } from "reactstrap";
+import { Button, Form, Input, Label, Alert } from "reactstrap";
 import {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom'
 
 
 export default function ObservationForm () {
@@ -56,16 +57,17 @@ export default function ObservationForm () {
                 <Label className="fs-4 fw-bold mt-2 mb-2"  for="newObservation">Type of Animal:</Label>
                 <Input type="text" className="fs-6" id="newObservation" placeholder="Name of Animal or Insect" onChange={(e) => setNewObservation(e.target.value)} required></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2">Animal Classification: </Label>
-                <Input type="text" className="fs-6" id="newClassification" placeholder="Ex: Mammal, Reptile, Bird, Insect" onChange={(e) => setNewClassification(e.target.value)}></Input>
+                <Input type="text" className="fs-6" id="newClassification" placeholder="Ex: Mammal, Reptile, Bird, Insect" onChange={(e) => setNewClassification(e.target.value)} required></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2"  for="newLocation">Observation Location:</Label>
-                <Input type="text" className="fs-6" id="newLocation" placeholder="City, State" onChange={(e) => setNewLocation(e.target.value)}  ></Input>
+                <Input type="text" className="fs-6" id="newLocation" placeholder="City, State" onChange={(e) => setNewLocation(e.target.value)} required ></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2" >Type of Location: </Label> 
-                <Input type="text" className="fs-6" id="newLocationType" placeholder="Ex: Field, Mountain, Sky, Ocean" onChange={(e) => setNewLocationType(e.target.value)}></Input>
+                <Input type="text" className="fs-6" id="newLocationType" placeholder="Ex: Field, Mountain, Sky, Ocean" onChange={(e) => setNewLocationType(e.target.value)}required></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2"  for="newDate">Observation Date:</Label>
-                <Input className="fs-6" id="newDate" type="Date" required onChange={(e) => setNewDate(e.target.value)}></Input>
+                <Input className="fs-6" id="newDate" type="Date" required onChange={(e) => setNewDate(e.target.value)} ></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2" >Time of Day: </Label> 
                 <Input type="text" className="fs-6" id="newTimeOfDay" placeholder="Ex: Morning, Afternoon, Evening, Night" onChange={(e) => setNewTimeOfDay(e.target.value)} required></Input>
-                <Button className="ob-btn btn mt-4 mb-2 fs-4 border-white" id="submitObservation" onClick={(e) => postNewObservation(e)}> Add Observation to Your Field Notes</Button>
+                <Button className="observation-button mt-4 mb-2 fs-5 border-white" id="submitObservation" color="light" type="submit" onClick={(e) => postNewObservation(e)} > Add Observation to Your Field Notes</Button>
+                <Button className="mt-4 mb-2 ms-2 fs-5 border-white" color="light" type="submit"><Link className="text-dark link-btn" to="/fieldguide">View Field Guide</Link></Button>
             </Form>
         </div>
     );
