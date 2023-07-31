@@ -8,9 +8,7 @@ import Row from 'react-bootstrap/Row';
 import lizard from "../Images/fencelizard.jpeg";
 import monarch from "../Images/monarch.jpeg";
 import blackbear from "../Images/blackbear.jpeg";
-import EditBtnModal from '../Components/EditBtnModal';
 import {Link} from 'react-router-dom';
-
 
 export default function FieldGuide() {
   const API_URL = 
@@ -57,7 +55,7 @@ export default function FieldGuide() {
       <p className="fieldguide-text fs-5 fw-bold mt-4">This Field Guide keeps track of all of the animals you have seen.</p>
       <div class="mapContainer row">
         <table className="fieldguide border border-white border-3 table table-bordered table-striped table-responsive table-hover table-success">
-          <thead className="fieldguide-head fs-5 fw-bold border">
+          <thead className="fieldguide-head fs-5 fw-bold border border-white">
           <tr>
               <th>Update</th>
               <th>Type of Animal</th>
@@ -72,7 +70,7 @@ export default function FieldGuide() {
           <tbody>
               {observations.map((observation, index) => (
                 <tr key={index}>
-                  <td><Button className="fieldguide-btn btn border-secondary mb-2 mt-2 border-white" onClick={() => EditBtnModal() }>✐</Button></td>
+                  <td><Button className="fieldguide-btn btn border-secondary mb-2 mt-2 border-white text-white fw-bolder" color="outline" type="submit"><Link className="text-dark link-btn" to="/hidden">✐</Link></Button></td>
               {/* would I put the modal inside of this return and have two returns? deleting the editbtbmodal component? */}
                   <td>{observation.observation}</td>
                   <td>{observation.classification}</td>
@@ -80,7 +78,7 @@ export default function FieldGuide() {
                   <td>{observation.locationtype}</td>
                   <td>{observation.timeofday}</td>
                   <td>{observation.date}</td>
-                  <td><Button className="fieldguide-btn btn border-secondary mb-2 mt-2 border-white" onClick={() => deleteObservation(observation.id)}>🗑</Button></td>
+                  <td><Button className="fieldguide-btn btn border-secondary mb-2 mt-2 border-white" color="outline" type="submit" onClick={() => deleteObservation(observation.id)}>🗑</Button></td>
             </tr>
               ))}
           </tbody>

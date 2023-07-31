@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form, Input, Label } from "reactstrap";
 import {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
 
 
 // I think I will need to import useEffect and useState as well as adding const for api, getObservations function and useEffect... or I can make this a router page, but not on the NavBar... then it links to a page, updates and the button takes you back to the fieldguide. I also want to have the form on the homepage to take you to the fieldguide page when you hit submit
@@ -55,6 +56,7 @@ export default function UpdateForm () {
           )
           }
     return (
+        <>
         <div className="text-center">
             <Form className="border border-3 border-white p-2 update-form">
                 <h3 className='header m-2 p-2 fs-1 border-bottom border-3 border-white fw-bold'><span>Update Field Guide Observation</span></h3>
@@ -70,8 +72,11 @@ export default function UpdateForm () {
                 <Input type="date" className="fs-6" id="updatedDate" required onChange={(e) => setUpdatedDate(e.target.value)}></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2">Edit Time Of Day</Label>
                 <Input type="text" className="fs-6" id="updatedTimeOfDay" placeholder="Ex: Morning, Afternoon, Evening, Night" required onChange={(e) => setUpdatedTimeOfDay(e.target.value)}></Input>
-                <Button className="ob-btn btn mt-3 mb-2 fs-5 border-white"  id="updateObservation" color="light" type="submit" onClick={(e) => updateObservation(e, observations)}>Update Observation ✐</Button>
+                <Button className="ob-btn btn mt-4 mb-2 fs-5 border-white"  id="updateObservation" color="light" type="submit" onClick={(e) => updateObservation(e, observations)}>Update Observation ✐</Button>
+                <Button className="mt-4 mb-2 ms-2 fs-5 border-white" color="light" type="submit"><Link className="text-dark link-btn" to="/fieldguide">Return To Field Guide</Link></Button>
             </Form>
         </div>
+
+    </>
     );
 }
