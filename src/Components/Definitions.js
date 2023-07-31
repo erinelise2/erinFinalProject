@@ -5,7 +5,7 @@ export default function Definitions() {
         <>
         <div className="definitions-div border border-3 border-white mt-4">
         <h3 className="text-center mt-2 border-bottom ms-4 me-4 border-2 p-2 fw-bold">Some Helpful Definitions For Your Entries</h3>
-        <p className="text-center ms-4 me-4">Definitions adapted from Merriam Webster</p>
+        <p className="text-center ms-4 me-4"><i>Definitions adapted from Merriam Webster</i></p>
         <ul className="me-3">
           <li>
             <b>Type of Animal:</b> This is where you describe the animal based on the common name. This can be anything from a fish in the lake, a butterfly on a flower, or a bear in the forest.
@@ -32,7 +32,7 @@ export default function Definitions() {
               <b>Insect:</b> Arthropods (such as bugs or bees) with well-definted head, thorax, and abdomen, only three pairs of legs, and typically one or two pairs of wings. (Spiders, scorpions, mites and ticks are not insects.)
             </li>
             <li>
-              <b>Arachnids:</b> Arthropods comprising chiefly of terresetrial (land) invertibrates (not a defined spinal column), including spiders, scorpions, mites, and ticks, and having a segmented body divided into two regions of which the anterior bears four pairs of legs but no antennae.
+              <b>Arachnid:</b> Arthropods comprising chiefly of terresetrial (land) invertibrates (not a defined spinal column), including spiders, scorpions, mites, and ticks, and having a segmented body divided into two regions of which the anterior bears four pairs of legs but no antennae.
             </li>
             </ul>
           </li>
