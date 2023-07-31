@@ -9,6 +9,8 @@ import lizard from "../Images/fencelizard.jpeg";
 import monarch from "../Images/monarch.jpeg";
 import blackbear from "../Images/blackbear.jpeg";
 import EditBtnModal from '../Components/EditBtnModal';
+import {Link} from 'react-router-dom';
+
 
 export default function FieldGuide() {
   const API_URL = 
@@ -88,6 +90,9 @@ export default function FieldGuide() {
     <div>
     <hr className="me-3 ms-3 border border-white"></hr>
     <p className="fw-bold text-center text-white"> You can edit or delete your observations using the buttons on the table.</p>
+    </div>
+    <div className="text-center m-4">
+        <Link className="link text-white border border-2 p-2 rounded" to="/">Return Home To Add A New Entry</Link>
     </div>
     </div>
     </>

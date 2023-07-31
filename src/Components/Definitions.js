@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 export default function Definitions() {
     return (
         <>
-        <div className="definitions-div  border border-3 border-white mt-4">
+        <div className="definitions-div border border-3 border-white mt-4">
         <h3 className="text-center mt-2 border-bottom ms-4 me-4 border-2 p-2 fw-bold">Some Helpful Definitions For Your Entries</h3>
         <p className="text-center ms-4 me-4">Definitions adapted from Merriam Webster</p>
         <ul className="me-3">
@@ -53,10 +53,10 @@ export default function Definitions() {
             </ul>
           </li>
         </ul>
-      </div>
-    <div className="text-center mt-4">
+        <div className="text-center m-4">
         <Link className="link text-white border border-2 p-2 rounded" to="/">Return Home</Link>
     </div>
+      </div>
     </>
     )
 }
