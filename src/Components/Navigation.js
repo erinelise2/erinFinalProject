@@ -3,6 +3,8 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 
+// Examples of navigation bars: https://react-bootstrap.netlify.app/docs/components/navbar/
+
 export default function Navigation() {
     return (
         <Navbar expand="sm" className="navigation-bar mb-4">

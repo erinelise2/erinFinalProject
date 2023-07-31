@@ -14,25 +14,25 @@ export default function Definitions() {
             <b>Classification:</b> (Some basic group ideas)
             <ul>
             <li>
-              <b>Mammal:</b> Warm-blooded higher vertebrates (has a spinal column) that nourish their young with milk secreted from mammary glands, have the skin usually more or less covered with hair, and breathe air. 
+              <b><u>Mammal</u>:</b> Warm-blooded higher vertebrates (has a spinal column) that nourish their young with milk secreted from mammary glands, have the skin usually more or less covered with hair, and breathe air. 
             </li>
             <li>
-              <b>Reptile:</b> Cold-blooded, air-breathing, usually egg-laying vertebrates that include the alligators and crocodiles, lizards, snakes, turtles, and extinct related forms and that have a body typically covered with scales or bony plates and a bony skeleton.
+              <b><u>Reptile</u>:</b> Cold-blooded, air-breathing, usually egg-laying vertebrates that include the alligators and crocodiles, lizards, snakes, turtles, and extinct related forms and that have a body typically covered with scales or bony plates and a bony skeleton.
             </li>
             <li>
-              <b>Amphibian:</b> Cold-blooded vertebrates intermediate in many characters between fish and reptiles and having gilled aquatic larvar and air breathing adults. (Generally have smooth moist skin, rather than drier scaley skin like reptiles.)
+              <b><u>Amphibian</u>:</b> Cold-blooded vertebrates intermediate in many characters between fish and reptiles and having gilled aquatic larvar and air breathing adults. (Generally have smooth moist skin, rather than drier scaley skin like reptiles.)
             </li>
             <li>
-                <b>Fish:</b> Cold-blooded strictly aquatic vertebrates that include the bony fishes and usually the cartilaginous and jawless fishes that have typically an elongated somewhat spindle-shaped body terminating in a broad caudal fin, limbs in the form of fins when present at all, and a two-chambered heart by which blood is sent through thoracic gills to be oxygenated.
+                <b><u>Fish</u>:</b> Cold-blooded strictly aquatic vertebrates that include the bony fishes and usually the cartilaginous and jawless fishes that have typically an elongated somewhat spindle-shaped body terminating in a broad caudal fin, limbs in the form of fins when present at all, and a two-chambered heart by which blood is sent through thoracic gills to be oxygenated.
             </li>
             <li>
-              <b>Bird:</b> Warm-blooded vertebrates distinguished by having the body more or less completely covered with featers and the forelimbs modified as wings.
+              <b><u>Bird</u>:</b> Warm-blooded vertebrates distinguished by having the body more or less completely covered with featers and the forelimbs modified as wings.
             </li>
             <li>
-              <b>Insect:</b> Arthropods (such as bugs or bees) with well-definted head, thorax, and abdomen, only three pairs of legs, and typically one or two pairs of wings. (Spiders, scorpions, mites and ticks are not insects.)
+              <b><u>Insect</u>:</b> Arthropods (such as bugs or bees) with well-definted head, thorax, and abdomen, only three pairs of legs, and typically one or two pairs of wings. (Spiders, scorpions, mites and ticks are not insects.)
             </li>
             <li>
-              <b>Arachnid:</b> Arthropods comprising chiefly of terresetrial (land) invertibrates (not a defined spinal column), including spiders, scorpions, mites, and ticks, and having a segmented body divided into two regions of which the anterior bears four pairs of legs but no antennae.
+              <b><u>Arachnid</u>:</b> Arthropods comprising chiefly of terresetrial (land) invertibrates (not a defined spinal column), including spiders, scorpions, mites, and ticks, and having a segmented body divided into two regions of which the anterior bears four pairs of legs but no antennae.
             </li>
             </ul>
           </li>
