@@ -54,8 +54,9 @@ export default function Definitions() {
           </li>
         </ul>
         <div className="text-center m-4">
-        <Link className="link text-white border border-2 p-2 rounded" to="/">Return Home</Link>
-    </div>
+            <Link className="link text-white border border-2 p-2 rounded" to="/">Return Home</Link>
+            <Link className="link text-white border border-2 p-2 rounded ms-2" to="/fieldguide">View Field Guide</Link>
+        </div>
       </div>
     </>
     )

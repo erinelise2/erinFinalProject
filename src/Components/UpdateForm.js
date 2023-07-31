@@ -59,7 +59,7 @@ export default function UpdateForm () {
         <>
         <div className="text-center">
             <Form className="border border-3 border-white p-2 update-form">
-                <h3 className='header m-2 p-2 fs-1 border-bottom border-3 border-white fw-bold'><span>Update Field Guide Observation</span></h3>
+                <h3 className='header m-2 p-2 fs-1 border-bottom border-3 border-white fw-bold'><span>Update Field Guide Observation ✐</span></h3>
                 <Label className="fs-4 fw-bold mt-2 mb-2" for="updatedObservation">Edit Type of Animal</Label>
                 <Input type="text" className="fs-6" id="updatedObservation" placeholder="Name of Animal or Insect" onChange={(e) => setUpdatedObservation(e.target.value)} required></Input>      
                 <Label className="fs-4 fw-bold mt-2 mb-2">Edit Animal Classification</Label>
@@ -74,9 +74,11 @@ export default function UpdateForm () {
                 <Input type="text" className="fs-6" id="updatedTimeOfDay" placeholder="Ex: Morning, Afternoon, Evening, Night" required onChange={(e) => setUpdatedTimeOfDay(e.target.value)}></Input>
                 <Button className="ob-btn btn mt-4 mb-2 fs-5 border-white"  id="updateObservation" color="light" type="submit" onClick={(e) => updateObservation(e, observations)}>Update Observation ✐</Button>
                 <Button className="mt-4 mb-2 ms-2 fs-5 border-white" color="light" type="submit"><Link className="text-dark link-btn" to="/fieldguide">Return To Field Guide</Link></Button>
+                <div className="text-center mt-4 mb-4 fs-5">
+                    <Link className="link text-white border border-2 p-2 rounded" to="/definitions">Click Here Form Entry Help and Definitions</Link>
+                 </div>
             </Form>
         </div>
-
     </>
     );
 }
