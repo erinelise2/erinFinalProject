@@ -5,7 +5,6 @@ import {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 
 
-// I think I will need to import useEffect and useState as well as adding const for api, getObservations function and useEffect... or I can make this a router page, but not on the NavBar... then it links to a page, updates and the button takes you back to the fieldguide. I also want to have the form on the homepage to take you to the fieldguide page when you hit submit
 
 export default function UpdateForm () {
     const API_URL = 

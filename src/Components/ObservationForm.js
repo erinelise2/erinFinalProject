@@ -72,7 +72,6 @@ export default function ObservationForm () {
       .then(() => {
         getObservations();
         clearForm();
-        // Step 3: Set showModal to true when the observation is successfully submitted
         setShowAlert(true);
       })
       .catch((error) => {

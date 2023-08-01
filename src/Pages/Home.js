@@ -10,9 +10,6 @@ import hawk from "../Images/hawk.jpeg";
 import {Link} from 'react-router-dom';
 
 
-
-// import { Button, Form, Input, Label } from "reactstrap";
-
 export default function Home() {
   return (
     <>
