@@ -29,9 +29,11 @@ export default function FieldGuide() {
   }
 
   function deleteObservation (id) {
-    fetch(API_URL + `/${id}`, {
-      method: 'DELETE',
+    if (window.confirm("Are you sure you would like to delete this entry?")) {
+      fetch(API_URL + `/${id}`, {
+        method: 'DELETE',
     }).then(() => getObservations())
+    }
   }
 
   return (   
@@ -88,7 +90,7 @@ export default function FieldGuide() {
     </div>
     <div>
     <hr className="me-3 ms-3 border border-white"></hr>
-    <p className="fw-bold text-center text-white"> You can edit or delete your observations using the buttons on the table. <br></br>Click on the animal name to add additional notes.</p>
+    <p className="fw-bold text-center text-white"> You can edit your entry by using hte button at the top of the page. To delete an entry use the buttons on the table.</p>
     {/* Is there a way to create a page for each animal that they can add notes to? */}
     </div>
     <div className="text-center m-4">
