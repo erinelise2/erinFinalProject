@@ -90,11 +90,12 @@ export default function FieldGuide() {
     </div>
     <div>
     <hr className="me-3 ms-3 border border-white"></hr>
-    <p className="fw-bold text-center text-white"> You can edit your entry by using hte button at the top of the page. To delete an entry use the buttons on the table.</p>
+    <p className="fw-bold text-center text-white"> You can edit your entry by using the button at the top or bottom of the page. <br></br> To delete an entry use the buttons on the table.</p>
     {/* Is there a way to create a page for each animal that they can add notes to? */}
     </div>
     <div className="text-center m-4">
-        <Link className="link text-white border border-2 p-2 rounded" to="/">Return Home To Add A New Entry</Link>
+      <Link className="link text-white border border-2 p-2 me-2 rounded" to="/updateform">✐ Edit An Entry</Link>
+      <Link className="link text-white border border-2 p-2 rounded" to="/">Return Home To Add A New Entry</Link>
     </div>
     </div>
     </>

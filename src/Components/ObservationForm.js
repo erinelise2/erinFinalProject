@@ -3,6 +3,8 @@ import { Button, Form, Input, Label } from "reactstrap";
 import Modal from 'react-bootstrap/Modal';
 import {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom'
+import ValidationModal from './ValidationModal';
+
 
 
 export default function ObservationForm () {
@@ -18,6 +20,7 @@ export default function ObservationForm () {
     console.log(dateWithoutTime);
 
     const [showAlert, setShowAlert] = useState(false);
+    const [showValidationModal, setShowValidationModal] = useState(false)
 
     const API_URL = 
   "https://64ad6821b470006a5ec5e9e5.mockapi.io/fieldguide/observation"
@@ -38,6 +41,20 @@ export default function ObservationForm () {
 
   function postNewObservation(e) {
     e.preventDefault();
+    if (!newObservation || !newClassification || !newLocation || !newLocationType || !newDate || !newTimeOfDay) {
+        // Handle the case when required fields are empty
+        // window.alert("Please fill out all required fields.");
+        setShowValidationModal(true);
+        return;
+      }
+    console.log("Form Data:", {
+        observation: newObservation,
+        classification: newClassification,
+        location: newLocation,
+        locationtype: newLocationType,
+        date: newDate,
+        timeofday: newTimeOfDay,
+    });
     fetch(API_URL, {
       method: 'POST',
       headers: {
@@ -65,12 +82,12 @@ export default function ObservationForm () {
 
 // Edit clear form and enter in below
         function clearForm(){
-            document.getElementById('newObservation').value = '';
-            document.getElementById('newClassification').value = '';
-            document.getElementById('newLocation').value = '';
-            document.getElementById('newLocationType').value = '';
-            document.getElementById('newTimeOfDay').value = '';
-            document.getElementById('newDate').value = new Date();
+            setNewObservation('');
+            setNewClassification('');
+            setNewLocation('');
+            setNewLocationType('');
+            setNewDate(new Date());
+            setNewTimeOfDay('');
         }
 
     return (
@@ -84,7 +101,8 @@ export default function ObservationForm () {
                     className="fs-6" 
                     id="newObservation" 
                     placeholder="Name of Animal or Insect" 
-                    onChange={(e) => setNewObservation(e.target.value)} 
+                    onChange={(e) => setNewObservation(e.target.value)}
+                    value={newObservation} 
                     required>
                 </Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2">Animal Classification: </Label>
@@ -93,15 +111,17 @@ export default function ObservationForm () {
                 className="fs-6" 
                 id="newClassification" 
                 placeholder="Ex: Mammal, Reptile, Bird, Insect" 
-                onChange={(e) => setNewClassification(e.target.value)} r
-                equired></Input>
+                onChange={(e) => setNewClassification(e.target.value)}
+                value={newClassification} 
+                required></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2"  for="newLocation" >Observation Location:</Label>
                 <Input 
                 type="text" 
                 className="fs-6" 
                 id="newLocation" 
                 placeholder="City, State" 
-                onChange={(e) => setNewLocation(e.target.value)} 
+                onChange={(e) => setNewLocation(e.target.value)}
+                value={newLocation} 
                 required ></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2" >Type of Location: </Label> 
                 <Input 
@@ -110,13 +130,15 @@ export default function ObservationForm () {
                 id="newLocationType" 
                 placeholder="Ex: Field, Mountain, Sky, Ocean" 
                 onChange={(e) => setNewLocationType(e.target.value)}
+                value={newLocationType} 
                 required></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2"  for="newDate">Observation Date:</Label>
                 <Input 
                 className="fs-6" 
                 id="newDate" 
                 type="Date" 
-                onChange={(e) => setNewDate(e.target.value)} 
+                onChange={(e) => setNewDate(e.target.value)}
+                value={newDate} 
                 required></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2" >Time of Day: </Label> 
                 <Input 
@@ -124,8 +146,9 @@ export default function ObservationForm () {
                 className="fs-6" 
                 id="newTimeOfDay" 
                 placeholder="Ex: Morning, Afternoon, Evening, Night" 
-                onChange={(e) => setNewTimeOfDay(e.target.value)} r
-                equired></Input>
+                onChange={(e) => setNewTimeOfDay(e.target.value)}
+                value={newTimeOfDay} 
+                required></Input>
                 <Button 
                     className="observation-button mt-4 mb-2 fs-5 border-white" 
                     id="submitObservation" 
@@ -134,10 +157,11 @@ export default function ObservationForm () {
                     onClick={(e) => postNewObservation(e)}>
                      Add Observation to Your Field Guide
                 </Button>
+                <ValidationModal show={showValidationModal} onClose={() => setShowValidationModal(false)}/>
                 <Button 
                 className="mt-4 mb-2 ms-2 fs-5 border-white" 
                 color="light" 
-                type="submit">
+                >
                     <Link className="text-dark link-btn" to="/fieldguide">View Field Guide</Link>
                 </Button>
             </Form>
