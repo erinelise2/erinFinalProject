@@ -159,6 +159,9 @@ a:link {
   background:rgb(74, 95, 74);
   color: white;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .fieldguide-header {
@@ -167,12 +170,12 @@ a:link {
   /* text-shadow: 1px 1px 1px rgb(201, 254, 197); */
 }
 
-/* Want the table to take up more width too... and for the columns to also have borders, maybe? */
-/* .mapContainer {
+.mapContainer {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
-  border: white;
-} */
+  align-items: center;
+}
 
 .fieldguide-head {
   text-align: center;
@@ -184,6 +187,10 @@ a:link {
 .fieldguide-btn {
   background-color: rgb(104, 139, 104);
   color: white;
+}
+
+.fieldguide {
+  overflow: auto;
 }
 
 .link-btn {
