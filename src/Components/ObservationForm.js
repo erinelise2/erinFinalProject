@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Form, Input, Label } from "reactstrap";
+import Modal from 'react-bootstrap/Modal';
 import {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom'
 
@@ -15,6 +16,8 @@ export default function ObservationForm () {
     const dateWithoutTime = new Date();
     dateWithoutTime.setHours(0, 0, 0, 0);
     console.log(dateWithoutTime);
+
+    const [showAlert, setShowAlert] = useState(false);
 
     const API_URL = 
   "https://64ad6821b470006a5ec5e9e5.mockapi.io/fieldguide/observation"
@@ -33,28 +36,33 @@ export default function ObservationForm () {
       })
   }
 
-        function postNewObservation(e) {
-            e.preventDefault()
-            fetch(API_URL, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                observation: newObservation,
-                classification: newClassification,
-                location: newLocation,
-                locationtype: newLocationType,
-                date: newDate,
-                timeofday: newTimeOfDay,
-              }),
-            }).then(() => getObservations())
-            .then(clearForm())
-            .catch((error) => {
-              console.log(error)
-            }
-          )
-          }
+  function postNewObservation(e) {
+    e.preventDefault();
+    fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        observation: newObservation,
+        classification: newClassification,
+        location: newLocation,
+        locationtype: newLocationType,
+        date: newDate,
+        timeofday: newTimeOfDay,
+      }),
+    })
+      .then(() => {
+        getObservations();
+        clearForm();
+        // Step 3: Set showModal to true when the observation is successfully submitted
+        setShowAlert(true);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
 // Edit clear form and enter in below
         function clearForm(){
             document.getElementById('newObservation').value = '';
@@ -66,6 +74,7 @@ export default function ObservationForm () {
         }
 
     return (
+        <>
         <div className="text-center">
             <Form className="border border-3 border-white p-2 observation-form">
             <h3 className='header m-2 p-2 fs-1 border-bottom border-3 border-white fw-bold'><span>Your Field Guide Entry Form ✐</span></h3>
@@ -79,15 +88,44 @@ export default function ObservationForm () {
                     required>
                 </Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2">Animal Classification: </Label>
-                <Input type="text" className="fs-6" id="newClassification" placeholder="Ex: Mammal, Reptile, Bird, Insect" onChange={(e) => setNewClassification(e.target.value)} required></Input>
+                <Input 
+                type="text" 
+                className="fs-6" 
+                id="newClassification" 
+                placeholder="Ex: Mammal, Reptile, Bird, Insect" 
+                onChange={(e) => setNewClassification(e.target.value)} r
+                equired></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2"  for="newLocation" >Observation Location:</Label>
-                <Input type="text" className="fs-6" id="newLocation" placeholder="City, State" onChange={(e) => setNewLocation(e.target.value)} required ></Input>
+                <Input 
+                type="text" 
+                className="fs-6" 
+                id="newLocation" 
+                placeholder="City, State" 
+                onChange={(e) => setNewLocation(e.target.value)} 
+                required ></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2" >Type of Location: </Label> 
-                <Input type="text" className="fs-6" id="newLocationType" placeholder="Ex: Field, Mountain, Sky, Ocean" onChange={(e) => setNewLocationType(e.target.value)}required></Input>
+                <Input 
+                type="text" 
+                className="fs-6" 
+                id="newLocationType" 
+                placeholder="Ex: Field, Mountain, Sky, Ocean" 
+                onChange={(e) => setNewLocationType(e.target.value)}
+                required></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2"  for="newDate">Observation Date:</Label>
-                <Input className="fs-6" id="newDate" type="Date" required onChange={(e) => setNewDate(e.target.value)} ></Input>
+                <Input 
+                className="fs-6" 
+                id="newDate" 
+                type="Date" 
+                onChange={(e) => setNewDate(e.target.value)} 
+                required></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2" >Time of Day: </Label> 
-                <Input type="text" className="fs-6" id="newTimeOfDay" placeholder="Ex: Morning, Afternoon, Evening, Night" onChange={(e) => setNewTimeOfDay(e.target.value)} required></Input>
+                <Input 
+                type="text" 
+                className="fs-6" 
+                id="newTimeOfDay" 
+                placeholder="Ex: Morning, Afternoon, Evening, Night" 
+                onChange={(e) => setNewTimeOfDay(e.target.value)} r
+                equired></Input>
                 <Button 
                     className="observation-button mt-4 mb-2 fs-5 border-white" 
                     id="submitObservation" 
@@ -96,8 +134,28 @@ export default function ObservationForm () {
                     onClick={(e) => postNewObservation(e)}>
                      Add Observation to Your Field Guide
                 </Button>
-                <Button className="mt-4 mb-2 ms-2 fs-5 border-white" color="light" type="submit"><Link className="text-dark link-btn" to="/fieldguide">View Field Guide</Link></Button>
+                <Button 
+                className="mt-4 mb-2 ms-2 fs-5 border-white" 
+                color="light" 
+                type="submit">
+                    <Link className="text-dark link-btn" to="/fieldguide">View Field Guide</Link>
+                </Button>
             </Form>
         </div>
+                <Modal show={showAlert} onHide={() => setShowAlert(false)}>
+                <Modal.Header className="bg-success text-white" closeButton>
+                    <Modal.Title className="fw-bold">Entry Added</Modal.Title>
+                </Modal.Header>
+                <Modal.Body className="modal-header">
+                    {`Hooray! Your observation entry has been added to your Field Guide.`}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button className="mb-2 ms-2 fs-5 border-white" color="success" ><Link className="text-white link-btn" to="/fieldguide">Visit Field Guide</Link></Button>
+                    <Button className="mb-2 ms-2 fs-5 border-secondary" color="success" onClick={() => setShowAlert(false)}>
+                    Return to Entry Form
+                    </Button>
+                </Modal.Footer>
+                </Modal>
+    </>
     );
 }

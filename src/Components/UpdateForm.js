@@ -104,7 +104,7 @@ export default function UpdateForm () {
                         setSelectedObservationId(e.target.value);
                         const selectedObservation = observations.find(observation => observation.id === e.target.value);
                         if (selectedObservation) {
-                            setSelectedObservationData(selectedObservation); // <-- Set the selected observation data here
+                            setSelectedObservationData(selectedObservation); 
                             setUpdatedObservation(selectedObservation.observation || '');
                             setUpdatedClassification(selectedObservation.classification || '');
                             setUpdatedLocation(selectedObservation.location || '');
@@ -191,16 +191,17 @@ export default function UpdateForm () {
             </Form>
         </div>
         <Modal show={showAlert} onHide={() => setShowAlert(false)}>
-        <Modal.Header closeButton>
-            <Modal.Title>Entry Updated</Modal.Title>
+        <Modal.Header className="bg-success text-white" closeButton>
+            <Modal.Title className="fw-bold">Entry Updated</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="modal-header">
             {`Hooray! Your "${selectedObservationData.observation}" entry has been updated.`}
         </Modal.Body>
         <Modal.Footer>
-            <Button variant="primary" onClick={() => setShowAlert(false)}>
+            <Button className="mb-2 ms-2 fs-5 border-white" color="success" ><Link className="text-white link-btn" to="/fieldguide">Return To Field Guide</Link></Button>
+            <Button className="mb-2 ms-2 fs-5 border-secondary" color="success" onClick={() => setShowAlert(false)}>
             Close
-         </Button>
+            </Button>
         </Modal.Footer>
         </Modal>
     </>

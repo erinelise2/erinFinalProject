@@ -263,3 +263,13 @@ a:link {
   background-color: #fff;
   border-radius: 5px;
 }
+
+.modal-header {
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.fox-img {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
