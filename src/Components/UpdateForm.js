@@ -186,7 +186,7 @@ export default function UpdateForm () {
                 >Update Observation ✐</Button>
                 <Button className="mt-4 mb-2 ms-2 fs-5 border-white" color="light" ><Link className="text-dark link-btn" to="/fieldguide">Return To Field Guide</Link></Button>
                 <div className="text-center mt-4 mb-4 fs-5">
-                    <Link className="link text-white border border-2 p-2 rounded" to="/definitions">Click Here Form Entry Help and Definitions</Link>
+                    <Link className="link text-white border border-2 p-2 rounded" to="/definitions">Click Here For Entry Help and Definitions</Link>
                  </div>
             </Form>
         </div>
