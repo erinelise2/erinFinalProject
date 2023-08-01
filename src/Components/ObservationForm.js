@@ -9,8 +9,12 @@ export default function ObservationForm () {
     const [newClassification, setNewClassification] = useState('')
     const [newLocation, setNewLocation] = useState('')
     const [newLocationType, setNewLocationType] = useState('')
-    const [newDate, setNewDate] = useState(Date())
+    const [newDate, setNewDate] = useState(new Date())
     const [newTimeOfDay, setNewTimeOfDay] = useState('')
+
+    const dateWithoutTime = new Date();
+    dateWithoutTime.setHours(0, 0, 0, 0);
+    console.log(dateWithoutTime);
 
     const API_URL = 
   "https://64ad6821b470006a5ec5e9e5.mockapi.io/fieldguide/observation"
@@ -58,7 +62,7 @@ export default function ObservationForm () {
             document.getElementById('newLocation').value = '';
             document.getElementById('newLocationType').value = '';
             document.getElementById('newTimeOfDay').value = '';
-            document.getElementById('newDate').value = Date();
+            document.getElementById('newDate').value = new Date();
         }
 
     return (

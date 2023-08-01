@@ -28,7 +28,7 @@ function App() {
         <Route path="/waystohelp" element={<WaysToHelp />}></Route>
         <Route path="/conservationgroups" element={<ConservationGroups />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/hidden" element={<UpdateForm />}></Route>
+        <Route path="/updateform" element={<UpdateForm />}></Route>
         <Route path="/definitions" element={<Definitions />}></Route>
         <Route path='*' element={<NotFound />}/>
     </Routes>

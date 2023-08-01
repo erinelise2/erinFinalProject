@@ -53,11 +53,12 @@ export default function FieldGuide() {
       </Container>
       <div>
       <p className="fieldguide-text fs-5 fw-bold mt-4">This Field Guide keeps track of all of the animals you have seen.</p>
+      <Link className="link text-white border border-2 p-2 rounded" to="/updateform">✐ Edit An Entry</Link>
       <div class="mapContainer row">
-        <table className="fieldguide border border-white border-3 table table-bordered table-striped table-responsive table-hover table-success">
+        <table className="fieldguide border border-white border-3 table table-bordered table-striped table-responsive table-hover table-success mt-4">
           <thead className="fieldguide-head fs-5 fw-bold border border-white">
           <tr>
-              <th>Update</th>
+              {/* <th>Update</th> */}
               <th>Type of Animal</th>
               <th>Classification</th>
               <th>City, State</th>
@@ -70,7 +71,7 @@ export default function FieldGuide() {
           <tbody>
               {observations.map((observation, index) => (
                 <tr key={index}>
-                  <td><Button className="fieldguide-btn btn border-secondary mb-2 mt-2 border-white text-white fw-bolder" color="outline" type="submit"><Link className="text-dark link-btn" to="/hidden">✐</Link></Button></td>
+                  {/* <td><Button className="fieldguide-btn btn border-secondary mb-2 mt-2 border-white text-white fw-bolder" color="outline" type="submit"><Link className="text-dark link-btn" to="/hidden">✐</Link></Button></td> */}
               {/* Ideally would like to have the edit button be a modal, but it can also go to the hidden page. To get it to work with the function, would I need to paste the update observation function above and call it like the delete? */}
                   <td>{observation.observation}</td>
                   <td>{observation.classification}</td>
