@@ -4,7 +4,6 @@ import Modal from 'react-bootstrap/Modal';
 import {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom'
 import ValidationModal from './ValidationModal';
-import { format } from 'date-fns';
 
 
 export default function ObservationForm () {
@@ -55,6 +54,10 @@ export default function ObservationForm () {
         date: newDate,
         timeofday: newTimeOfDay,
     });
+
+    const [month, day, year] = newDate.split('-');
+    const formattedDate = `${month}-${day}-${year}`;
+
     fetch(API_URL, {
       method: 'POST',
       headers: {
@@ -65,7 +68,7 @@ export default function ObservationForm () {
         classification: newClassification,
         location: newLocation,
         locationtype: newLocationType,
-        date: format(new Date(newDate), 'yyyy-MM-dd'), 
+        date: formattedDate, 
         timeofday: newTimeOfDay,
       }),
     })
