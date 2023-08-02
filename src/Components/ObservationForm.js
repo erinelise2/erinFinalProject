@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom'
 import ValidationModal from './ValidationModal';
-
+import { format } from 'date-fns';
 
 
 export default function ObservationForm () {
@@ -12,7 +12,7 @@ export default function ObservationForm () {
     const [newClassification, setNewClassification] = useState('')
     const [newLocation, setNewLocation] = useState('')
     const [newLocationType, setNewLocationType] = useState('')
-    const [newDate, setNewDate] = useState(new Date())
+    const [newDate, setNewDate] = useState('');
     const [newTimeOfDay, setNewTimeOfDay] = useState('')
 
     const dateWithoutTime = new Date();
@@ -65,7 +65,7 @@ export default function ObservationForm () {
         classification: newClassification,
         location: newLocation,
         locationtype: newLocationType,
-        date: newDate,
+        date: format(new Date(newDate), 'yyyy-MM-dd'), 
         timeofday: newTimeOfDay,
       }),
     })
@@ -134,9 +134,9 @@ export default function ObservationForm () {
                 <Input 
                 className="fs-6" 
                 id="newDate" 
-                type="Date" 
+                type="date" 
                 onChange={(e) => setNewDate(e.target.value)}
-                value={newDate} 
+                value={newDate}
                 ></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2" >Time of Day: </Label> 
                 <Input 

@@ -58,7 +58,7 @@ export default function FieldGuide() {
       <div>
       <p className="fieldguide-text fs-5 fw-bold mt-4">This Field Guide keeps track of all of the animals you have seen.</p>
       <Link className="link text-white border border-2 p-2 rounded me-2" to="/updateform">✐ Edit An Entry</Link>
-      <Link className="link text-white border border-2 p-2 rounded" to="/">Return Home To Add A New Entry</Link>      <div class="mapContainer row">
+      <Link className="link text-white border border-2 p-2 rounded" to="/">Return Home To Add A New Entry</Link>      <div className="mapContainer row">
         <table className="fieldguide border border-white border-3 table table-bordered table-striped table-responsive table-hover table-success mt-4">
           <thead className="fieldguide-head fs-5 fw-bold border border-white">
           <tr>

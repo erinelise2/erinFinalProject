@@ -4,6 +4,8 @@ import {Modal} from 'react-bootstrap';
 import {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
+import { format } from 'date-fns';
+
 
 
 export default function UpdateForm () {
@@ -18,7 +20,7 @@ export default function UpdateForm () {
     const [updatedClassification, setUpdatedClassification] = useState('')
     const [updatedLocation, setUpdatedLocation] = useState('')
     const [updatedLocationType, setUpdatedLocationType] = useState('')
-    const [updatedDate, setUpdatedDate] = useState(new Date())
+    const [updatedDate, setUpdatedDate] = useState('');
     const [updatedTimeOfDay, setUpdatedTimeOfDay] = useState('')
 
     const dateWithoutTime = new Date();
@@ -56,7 +58,7 @@ export default function UpdateForm () {
               classification: updatedClassification,
               location: updatedLocation,
               locationtype: updatedLocationType,
-              date: updatedDate,
+              date: format(new Date(updatedDate), 'yyyy-MM-dd'),
               timeofday: updatedTimeOfDay,
             }
         
@@ -125,8 +127,8 @@ export default function UpdateForm () {
                     <>
                     <Label className="fs-4 fw-bold mt-2 mb-2" for="updatedObservation">Edit Type of Animal</Label>
                     <Input 
-                    type="text" c
-                    lassName="fs-6" 
+                    type="text"
+                    className="fs-6" 
                     id="updatedObservation" 
                     value={updatedObservation} 
                     placeholder="Name of Animal or Insect" 
@@ -166,7 +168,7 @@ export default function UpdateForm () {
                         id="updatedDate" 
                         value={updatedDate}
                         onChange={(e) => setUpdatedDate(e.target.value)}
-                        ></Input>
+                    />
                     <Label className="fs-4 fw-bold mt-2 mb-2">Edit Time Of Day</Label>
                     <Input 
                         type="text" 
