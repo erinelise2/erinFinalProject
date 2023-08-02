@@ -9,6 +9,7 @@ import lizard from "../Images/fencelizard.jpeg";
 import monarch from "../Images/monarch.jpeg";
 import blackbear from "../Images/blackbear.jpeg";
 import {Link} from 'react-router-dom';
+import ScrollToTop from '../Components/ScrollToTop';
 
 export default function FieldGuide() {
   const API_URL = 
@@ -38,6 +39,7 @@ export default function FieldGuide() {
 
   return (   
     <> 
+        <ScrollToTop />
     <div className="form-container fieldguide-app border border-white border-3 pt-4 p-2 mt-4">
       <h1 className="fieldguide-header mb-4">Your Field Guide</h1>
       <Container>

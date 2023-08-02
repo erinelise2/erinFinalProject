@@ -8,11 +8,13 @@ import racoon from "../Images/babyracoon.jpeg";
 import coyote from "../Images/coyote.jpeg";
 import hawk from "../Images/hawk.jpeg";
 import {Link} from 'react-router-dom';
+import ScrollToTop from '../Components/ScrollToTop';
 
 
 export default function Home() {
   return (
     <>
+    <ScrollToTop />
     <div>
         <h1 className="home-header">Let's Explore Wildlife and Wild Places!</h1>
 {/* website for photo row https://react-bootstrap.netlify.app/docs/components/images/ */}

@@ -102,8 +102,7 @@ export default function ObservationForm () {
                     placeholder="Name of Animal or Insect" 
                     onChange={(e) => setNewObservation(e.target.value)}
                     value={newObservation} 
-                    required>
-                </Input>
+                    ></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2">Animal Classification: </Label>
                 <Input 
                 type="text" 
@@ -112,7 +111,7 @@ export default function ObservationForm () {
                 placeholder="Ex: Mammal, Reptile, Bird, Insect" 
                 onChange={(e) => setNewClassification(e.target.value)}
                 value={newClassification} 
-                required></Input>
+                ></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2"  for="newLocation" >Observation Location:</Label>
                 <Input 
                 type="text" 
@@ -121,7 +120,7 @@ export default function ObservationForm () {
                 placeholder="City, State" 
                 onChange={(e) => setNewLocation(e.target.value)}
                 value={newLocation} 
-                required ></Input>
+                 ></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2" >Type of Location: </Label> 
                 <Input 
                 type="text" 
@@ -130,7 +129,7 @@ export default function ObservationForm () {
                 placeholder="Ex: Field, Mountain, Sky, Ocean" 
                 onChange={(e) => setNewLocationType(e.target.value)}
                 value={newLocationType} 
-                required></Input>
+                ></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2"  for="newDate">Observation Date:</Label>
                 <Input 
                 className="fs-6" 
@@ -138,7 +137,7 @@ export default function ObservationForm () {
                 type="Date" 
                 onChange={(e) => setNewDate(e.target.value)}
                 value={newDate} 
-                required></Input>
+                ></Input>
                 <Label className="fs-4 fw-bold mt-2 mb-2" >Time of Day: </Label> 
                 <Input 
                 type="text" 
@@ -147,7 +146,7 @@ export default function ObservationForm () {
                 placeholder="Ex: Morning, Afternoon, Evening, Night" 
                 onChange={(e) => setNewTimeOfDay(e.target.value)}
                 value={newTimeOfDay} 
-                required></Input>
+                ></Input>
                 <Button 
                     className="observation-button mt-4 mb-2 fs-5 border-white" 
                     id="submitObservation" 

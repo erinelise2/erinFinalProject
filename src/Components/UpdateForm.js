@@ -3,7 +3,7 @@ import { Button, Form, Input, Label } from "reactstrap";
 import {Modal} from 'react-bootstrap';
 import {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
-
+import ScrollToTop from './ScrollToTop';
 
 
 export default function UpdateForm () {
@@ -89,6 +89,7 @@ export default function UpdateForm () {
 
     return (
         <>
+        <ScrollToTop />
         <div className="text-center">
             <Form className="border border-3 border-white p-2 update-form">
                 <h3 className='header m-2 p-2 fs-1 border-bottom border-3 border-white fw-bold'><span>Update Field Guide Observation ✐</span></h3>
@@ -130,7 +131,7 @@ export default function UpdateForm () {
                     value={updatedObservation} 
                     placeholder="Name of Animal or Insect" 
                     onChange={(e) => setUpdatedObservation(e.target.value)} 
-                    required></Input> 
+                    ></Input> 
                     <Label className="fs-4 fw-bold mt-2 mb-2">Edit Animal Classification</Label>
                     <Input 
                         type="text" 
@@ -139,7 +140,7 @@ export default function UpdateForm () {
                         value={updatedClassification} 
                         placeholder="Ex: Mammal, Reptile, Bird, Insect"  
                         onChange={(e) => setUpdatedClassification(e.target.value)} 
-                        required></Input>
+                        ></Input>
                     <Label className="fs-4 fw-bold mt-2 mb-2">Edit Observation Location</Label>
                     <Input 
                         type="text" 
@@ -148,7 +149,7 @@ export default function UpdateForm () {
                         value={updatedLocation} 
                         placeholder="City, State"
                         onChange={(e) => setUpdatedLocation(e.target.value)}
-                        required ></Input>
+                         ></Input>
                     <Label className="fs-4 fw-bold mt-2 mb-2">Edit Type of Location</Label>
                     <Input 
                         type="text" 
@@ -157,7 +158,7 @@ export default function UpdateForm () {
                         value={updatedLocationType} 
                         placeholder="Ex: Field, Mountain, Sky, Ocean" 
                         onChange={(e) => setUpdatedLocationType(e.target.value)}
-                        required ></Input>
+                         ></Input>
                     <Label className="fs-4 fw-bold mt-2 mb-2">Edit Observation Date</Label>
                     <Input 
                         type="date" 
@@ -165,7 +166,7 @@ export default function UpdateForm () {
                         id="updatedDate" 
                         value={updatedDate}
                         onChange={(e) => setUpdatedDate(e.target.value)}
-                        required></Input>
+                        ></Input>
                     <Label className="fs-4 fw-bold mt-2 mb-2">Edit Time Of Day</Label>
                     <Input 
                         type="text" 
@@ -174,7 +175,7 @@ export default function UpdateForm () {
                         value={updatedTimeOfDay} 
                         placeholder="Ex: Morning, Afternoon, Evening, Night" 
                         onChange={(e) => setUpdatedTimeOfDay(e.target.value)} 
-                        required></Input>
+                        ></Input>
                     </>
                 )}
                 <Button className="ob-btn btn mt-4 mb-2 fs-5 border-white"  id="updateObservation" color="light" type="submit"   

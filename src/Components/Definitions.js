@@ -1,8 +1,10 @@
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import ScrollToTop from './ScrollToTop';
 
 export default function Definitions() {
     return (
         <>
+        <ScrollToTop />
         <div className="definitions-div border border-3 border-white mt-4">
         <h3 className="text-center mt-2 border-bottom ms-4 me-4 border-2 p-2 fw-bold">Some Helpful Definitions For Your Entries</h3>
         <p className="text-center ms-4 me-4"><i>Definitions adapted from Merriam Webster</i></p>
