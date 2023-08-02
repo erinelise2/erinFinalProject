@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 // import Button from 'react-bootstrap/Button';
 
+// chatGPT helped me figure out where to put the modals and I expanded on them. Also helped me with the edit formatting
 const ValidationModal = ({ show, onClose }) => {
   return (
     <Modal show={show} onHide={onClose}>
